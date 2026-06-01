@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About AstraKAT Designs - Where Design Meets Purpose.">
+    <title>About Us | AstraKAT Designs</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#141414',
+                        light: '#F8F7F4',
+                        accent: '#c99f69',
+                        'accent-light': '#d9b689',
+                        'dark-gray': '#222222',
+                        'border-color': '#e5e5e5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base Styles & Custom Cursor */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #141414;
+            animation: fadeInPage 1.5s ease-in-out forwards;
+            cursor: none;
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* Custom Cursor Elements */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #c99f69;
+            border-radius: 50%;
+            position: fixed;
+            top: 0; left: 0;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(201, 159, 105, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            top: 0; left: 0;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, border-color 0.3s, background-color 0.3s;
+        }
+
+        body.cursor-hover .cursor-dot { background-color: transparent; }
+        body.cursor-hover .cursor-outline {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(201, 159, 105, 0.1);
+            border-color: #c99f69;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Hero */
+        .hero-bg-img {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('public/images/about-hero-new.png');
+            background-size: cover;
+            background-position: center;
+            animation: slowZoom 30s ease-in-out infinite alternate;
+            z-index: -2;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, rgba(20, 20, 20, 0.95) 0%, rgba(20, 20, 20, 0.7) 50%, rgba(20, 20, 20, 0.4) 100%);
+            z-index: -1;
+        }
+        @keyframes slowZoom { 0% { transform: scale(1); } 100% { transform: scale(1.15); } }
+
+        @keyframes fadeInPage { 0% { opacity: 0; } 100% { opacity: 1; } }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        .btn-primary, .btn-outline {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.875rem 2rem;
+            text-decoration: none;
+            cursor: none;
+        }
+        .btn-primary { background-color: #c99f69; color: #141414; transition: background-color 0.5s ease; }
+        .btn-primary:hover { background-color: #d9b689; }
+        .btn-outline { border: 1px solid #fff; color: #fff; transition: all 0.5s ease; }
+        .btn-outline:hover { background-color: #fff; color: #141414; }
+
+        .btn-outline-dark { border: 1px solid #141414; color: #141414; transition: all 0.5s ease; }
+        .btn-outline-dark:hover { background-color: #141414; color: #fff; }
+
+        .nav-link {
+            position: relative;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -6px;
+            left: 0;
+            background-color: #c99f69;
+            transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link:hover, .nav-link.active { color: #c99f69; }
+
+        .process-line {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            right: 24px;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            z-index: 0;
+        }
+        @media (max-width: 768px) {
+            .process-line { display: none; }
+        }
+
+        a, button, input, select, textarea { cursor: none; }
+    </style>
+</head>
+<body class="text-gray-300 antialiased overflow-x-hidden">
+
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Header -->
+    <header class="absolute top-0 left-0 right-0 z-50 py-6 border-b border-white/10 reveal">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <a href="index.html" class="text-white hover-target">
+                <div class="font-serif text-2xl tracking-wide leading-none group-hover:text-accent transition duration-500">AstraKAT</div>
+                <div class="text-[0.6rem] tracking-[0.3em] mt-1 font-semibold text-gray-300 group-hover:text-white transition duration-500">DESIGNS</div>
+            </a>
+
+            <nav class="hidden lg:flex space-x-10">
+                <a href="index.html" class="nav-link text-white hover-target">HOME</a>
+                <a href="about.html" class="nav-link text-white active hover-target">ABOUT</a>
+                <a href="index.html#specialise" class="nav-link text-white hover-target">SERVICES</a>
+                <a href="index.html#portfolio" class="nav-link text-white hover-target">PORTFOLIO</a>
+                <a href="index.html#process" class="nav-link text-white hover-target">PROCESS</a>
+                <a href="index.html#contact" class="nav-link text-white hover-target">CONTACT</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="index.html#contact" class="btn-outline !py-2 !px-5 text-[0.65rem] hover-target">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[85vh] flex flex-col justify-center pt-32 pb-24">
+            <div class="hero-bg-img"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="container mx-auto px-6 lg:px-12 relative z-10">
+                <div class="max-w-3xl">
+                    <p class="text-accent text-sm font-bold tracking-[0.3em] mb-6 uppercase reveal delay-100">ABOUT ASTRAKAT DESIGNS</p>
+                    <h1 class="text-5xl lg:text-7xl font-serif text-white leading-[1.1] mb-8 reveal delay-200">
+                        Where Design <br>
+                        <span class="text-accent italic">Meets Purpose</span>
+                    </h1>
+                    <p class="text-gray-300 text-lg mb-6 max-w-xl leading-relaxed reveal delay-300 font-light">
+                        We are a full-service design and build studio specialising in Bespoke Furniture, Interior Design, and Architectural Development.
+                    </p>
+                    <p class="text-gray-300 text-lg mb-10 max-w-xl leading-relaxed reveal delay-300 font-light">
+                        We create timeless spaces that inspire, function beautifully, and stand the test of time.
+                    </p>
+                    <p class="text-accent text-sm font-bold tracking-[0.2em] mb-6 uppercase reveal delay-400">
+                        ONE TEAM. ONE VISION. EXCEPTIONAL RESULTS.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story & Our Leadership (Unified 3-Column Section) -->
+        <section class="py-32 bg-[#141414] relative border-b border-white/5">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                    <!-- Left Column: Our Story -->
+                    <div class="lg:col-span-4 reveal delay-100">
+                        <p class="text-accent text-xs font-bold tracking-[0.3em] mb-4 uppercase">OUR STORY</p>
+                        <h2 class="font-serif text-3xl xl:text-4xl text-white mb-8 leading-tight">Rooted in Passion.<br>Driven by Purpose.</h2>
+                        <div class="space-y-6 text-gray-400 font-light leading-relaxed text-sm xl:text-base">
+                            <p>AstraKAT Designs was founded with a simple mission — to deliver exceptional design and build experiences tailored to each client's lifestyle and aspirations.</p>
+                            <p>From concept to completion, we bring together creativity, precision, and craftsmanship to deliver spaces that are not only visually stunning but also deeply personal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Middle Column: Image -->
+                    <div class="lg:col-span-4 reveal delay-200 relative mt-12 lg:mt-0">
+                        <div class="relative w-full h-[500px] xl:h-[600px] border border-white/10 rounded-sm overflow-hidden">
+                            <img src="public/images/pratiksha.png" alt="Pratiksha Renake" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-[#141414] p-5 border border-white/10 shadow-2xl z-10">
+                            <p class="text-accent text-[0.65rem] font-bold tracking-widest uppercase mb-1">HEAD OF DESIGN</p>
+                            <p class="text-white font-serif text-lg">Pratiksha Renake</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Our Leadership -->
+                    <div class="lg:col-span-4 reveal delay-300 lg:pl-8 mt-16 lg:mt-0">
+                        <p class="text-accent text-xs font-bold tracking-[0.3em] mb-4 uppercase">OUR LEADERSHIP</p>
+                        <h2 class="font-serif text-3xl xl:text-4xl text-white mb-2">Pratiksha Renake</h2>
+                        <h3 class="text-lg text-accent mb-8 font-serif italic">Head of Design</h3>
+
+                        <div class="space-y-6 text-gray-400 font-light leading-relaxed text-sm xl:text-base mb-10">
+                            <p>Pratiksha Renake leads our design team with creativity, precision, and a deep understanding of space and aesthetics.</p>
+                            <p>She holds a Master's in Architecture (MArch) from University College London (UCL) and brings extensive experience in delivering high-end residential projects from concept to completion.</p>
+                        </div>
+
+                        <!-- UCL Logo Representation -->
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-building-columns text-[#141414] text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold tracking-widest uppercase text-sm">UCL</p>
+                                <p class="text-gray-500 text-xs">University College London</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey / Process -->
+        <section class="py-32 bg-[#141414] border-b border-white/5">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                    <h2 class="font-serif text-4xl text-white mb-4">A Journey That Brings Your Vision To Life</h2>
+                </div>
+
+                <div class="relative">
+                    <div class="process-line"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+
+                        <!-- Step 1 -->
+                        <div class="reveal delay-100 relative pt-8 md:pt-0">
+                            <div class="w-12 h-12 rounded-full bg-[#141414] border-2 border-accent text-accent flex items-center justify-center font-serif text-xl absolute top-0 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 md:-mt-6">1</div>
+                            <div class="pt-10 md:pt-12 text-center md:text-left">
+                                <h3 class="font-serif text-xl text-white mb-3">Consultation</h3>
+                                <p class="text-gray-400 font-light text-sm leading-relaxed">Understanding your vision, lifestyle, and specific project requirements.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="reveal delay-200 relative pt-8 md:pt-0">
+                            <div class="w-12 h-12 rounded-full bg-[#141414] border-2 border-accent text-accent flex items-center justify-center font-serif text-xl absolute top-0 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 md:-mt-6">2</div>
+                            <div class="pt-10 md:pt-12 text-center md:text-left">
+                                <h3 class="font-serif text-xl text-white mb-3">Concept Design</h3>
+                                <p class="text-gray-400 font-light text-sm leading-relaxed">Creating bespoke designs tailored to your unique preferences and space.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="reveal delay-300 relative pt-8 md:pt-0">
+                            <div class="w-12 h-12 rounded-full bg-[#141414] border-2 border-accent text-accent flex items-center justify-center font-serif text-xl absolute top-0 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 md:-mt-6">3</div>
+                            <div class="pt-10 md:pt-12 text-center md:text-left">
+                                <h3 class="font-serif text-xl text-white mb-3">Planning & Execution</h3>
+                                <p class="text-gray-400 font-light text-sm leading-relaxed">Meticulous planning and expert craftsmanship brought to life by our team.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="reveal delay-400 relative pt-8 md:pt-0">
+                            <div class="w-12 h-12 rounded-full bg-[#141414] border-2 border-accent text-accent flex items-center justify-center font-serif text-xl absolute top-0 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 md:-mt-6">4</div>
+                            <div class="pt-10 md:pt-12 text-center md:text-left">
+                                <h3 class="font-serif text-xl text-white mb-3">Handover & Support</h3>
+                                <p class="text-gray-400 font-light text-sm leading-relaxed">Delivering the finished space to the highest standards, with ongoing support.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values -->
+        <section class="py-32 bg-[#1a1a1a]">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                    <p class="text-accent text-sm font-bold tracking-[0.3em] mb-4 uppercase">OUR VALUES</p>
+                    <h2 class="font-serif text-4xl text-white">The Principles That Guide Everything We Do.</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                    <div class="reveal delay-100 bg-[#141414] p-8 border border-white/5 hover:border-accent/50 transition duration-500">
+                        <i class="fa-solid fa-scale-balanced text-3xl text-accent mb-6"></i>
+                        <h3 class="font-serif text-xl text-white mb-4">Integrity</h3>
+                        <p class="text-gray-400 font-light text-sm leading-relaxed">Transparent and ethical in every relationship and decision.</p>
+                    </div>
+
+                    <div class="reveal delay-200 bg-[#141414] p-8 border border-white/5 hover:border-accent/50 transition duration-500">
+                        <i class="fa-solid fa-hammer text-3xl text-accent mb-6"></i>
+                        <h3 class="font-serif text-xl text-white mb-4">Craftsmanship</h3>
+                        <p class="text-gray-400 font-light text-sm leading-relaxed">Dedicated to the highest standards in design and delivery.</p>
+                    </div>
+
+                    <div class="reveal delay-300 bg-[#141414] p-8 border border-white/5 hover:border-accent/50 transition duration-500">
+                        <i class="fa-solid fa-handshake text-3xl text-accent mb-6"></i>
+                        <h3 class="font-serif text-xl text-white mb-4">Collaboration</h3>
+                        <p class="text-gray-400 font-light text-sm leading-relaxed">We believe the best results come from working closely with you.</p>
+                    </div>
+
+                    <div class="reveal delay-400 bg-[#141414] p-8 border border-white/5 hover:border-accent/50 transition duration-500">
+                        <i class="fa-solid fa-leaf text-3xl text-accent mb-6"></i>
+                        <h3 class="font-serif text-xl text-white mb-4">Sustainability</h3>
+                        <p class="text-gray-400 font-light text-sm leading-relaxed">Thoughtful design for a better, more relevant tomorrow.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-32 bg-[#c99f69] text-dark text-center">
+            <div class="container mx-auto px-6 reveal">
+                <h2 class="font-serif text-4xl mb-6">Let's Create Something Extraordinary</h2>
+                <p class="mb-10 max-w-2xl mx-auto font-medium">Ready to transform your space into something timeless? We'd love to hear from you.</p>
+                <a href="index.html#contact" class="btn-outline-dark !border-dark !text-dark hover:!bg-dark hover:!text-white hover-target inline-flex items-center">
+                    BOOK A CONSULTATION
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#141414] text-white pt-20 pb-10">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 reveal delay-100">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="inline-block mb-6 hover-target">
+                        <div class="font-serif text-3xl tracking-wide leading-none">AstraKAT</div>
+                        <div class="text-[0.6rem] tracking-[0.4em] mt-1 font-semibold text-gray-400">DESIGNS</div>
+                    </a>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-accent">NAVIGATION</h3>
+                    <ul class="space-y-3 font-light text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white hover-target">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white hover-target">About Us</a></li>
+                        <li><a href="index.html#specialise" class="text-gray-400 hover:text-white hover-target">Services</a></li>
+                        <li><a href="index.html#portfolio" class="text-gray-400 hover:text-white hover-target">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-accent">CONTACT</h3>
+                    <ul class="space-y-3 font-light text-sm">
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white hover-target">Book Consultation</a></li>
+                        <li><a href="https://wa.me/" class="text-gray-400 hover:text-white hover-target">WhatsApp Us</a></li>
+                    </ul>
+
+                    <!-- Footer secondary CTA -->
+                    <div class="mt-10 border-t border-white/10 pt-6">
+                        <h4 class="font-serif text-lg text-white mb-4">Let's Build Something Timeless.</h4>
+                        <a href="index.html#contact" class="text-accent text-xs font-bold tracking-widest uppercase hover:text-white transition hover-target inline-flex items-center">
+                            BOOK A CONSULTATION <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-light reveal delay-200">
+                <p>&copy; 2025 AstraKAT Designs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', function(e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 100, fill: "forwards" });
+        });
+
+        const hoverTargets = document.querySelectorAll('.hover-target, a, button, input, select');
+        hoverTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            target.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

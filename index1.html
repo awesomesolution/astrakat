@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AstraKAT Designs - Bespoke Furniture, Interior Design & Architectural Development.">
+    <title>AstraKAT Designs | Luxury Interior & Architectural Development</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#141414',
+                        light: '#F8F7F4',
+                        accent: '#c99f69',
+                        'accent-light': '#d9b689',
+                        'dark-gray': '#222222',
+                        'border-color': '#e5e5e5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base Styles & Custom Cursor */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #141414;
+            animation: fadeInPage 1.5s ease-in-out forwards;
+            cursor: none;
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* Custom Cursor Elements */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #c99f69;
+            border-radius: 50%;
+            position: fixed;
+            top: 0; left: 0;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(201, 159, 105, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            top: 0; left: 0;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, border-color 0.3s, background-color 0.3s;
+        }
+
+        body.cursor-hover .cursor-dot { background-color: transparent; }
+        body.cursor-hover .cursor-outline {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(201, 159, 105, 0.1);
+            border-color: #c99f69;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Video Hero */
+        .video-wrapper {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            overflow: hidden;
+            z-index: -2;
+        }
+        .video-wrapper video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: brightness(0.7) contrast(1.1);
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, rgba(20, 20, 20, 0.95) 0%, rgba(20, 20, 20, 0.6) 50%, rgba(20, 20, 20, 0.2) 100%);
+            z-index: -1;
+        }
+
+        @keyframes fadeInPage { 0% { opacity: 0; } 100% { opacity: 1; } }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        .btn-primary, .btn-outline {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.875rem 2rem;
+            text-decoration: none;
+            cursor: none;
+        }
+        .btn-primary { background-color: #c99f69; color: #141414; transition: background-color 0.5s ease; }
+        .btn-primary:hover { background-color: #d9b689; }
+        .btn-outline { border: 1px solid #fff; color: #fff; transition: all 0.5s ease; }
+        .btn-outline:hover { background-color: #fff; color: #141414; }
+
+        .ba-slider {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            min-height: 400px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .ba-image {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .ba-after { background-image: url('public/images/after-room.png'); z-index: 1; }
+        .ba-before {
+            background-image: url('public/images/before-room.png');
+            z-index: 2;
+            width: 50%;
+            border-right: 2px solid #c99f69;
+        }
+        .ba-handle {
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 50%;
+            width: 40px;
+            margin-left: -20px;
+            z-index: 3;
+            cursor: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ba-handle-btn {
+            width: 40px; height: 40px;
+            background-color: #c99f69;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #141414;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
+        }
+        .ba-slider:hover .ba-handle-btn { transform: scale(1.1); }
+        .ba-label {
+            position: absolute;
+            bottom: 20px;
+            padding: 5px 15px;
+            background: rgba(20,20,20,0.7);
+            color: white;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            backdrop-filter: blur(4px);
+        }
+        .ba-label-before { left: 20px; z-index: 4; }
+        .ba-label-after { right: 20px; z-index: 1; }
+
+        .press-marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            background: #0a0a0a;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .press-marquee::before, .press-marquee::after {
+            content: '';
+            position: absolute;
+            top: 0; width: 150px; height: 100%;
+            z-index: 2;
+        }
+        .press-marquee::before { left: 0; background: linear-gradient(to right, #0a0a0a, transparent); }
+        .press-marquee::after { right: 0; background: linear-gradient(to left, #0a0a0a, transparent); }
+
+        .press-track {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        .press-logo {
+            display: inline-block;
+            margin: 0 4rem;
+            color: rgba(255,255,255,0.3);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+        }
+        .press-logo:hover { color: rgba(255,255,255,0.8); }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.active { opacity: 1; pointer-events: all; }
+        .modal-content {
+            background: #1a1a1a;
+            width: 100%;
+            max-width: 600px;
+            padding: 3rem;
+            border: 1px solid rgba(201, 159, 105, 0.3);
+            transform: translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+        }
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        .form-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding: 1rem 0;
+            color: white;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus { outline: none; border-bottom-color: #c99f69; }
+        .form-input::placeholder { color: rgba(255,255,255,0.3); }
+        select.form-input option { background: #1a1a1a; color: white; }
+
+        a, button, input, select, textarea { cursor: none; }
+    </style>
+</head>
+<body class="text-gray-300 antialiased overflow-x-hidden">
+
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <header class="absolute top-0 left-0 right-0 z-50 py-6 border-b border-white/10 reveal">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <a href="#" class="text-white hover-target">
+                <div class="font-serif text-2xl tracking-wide leading-none">AstraKAT</div>
+                <div class="text-[0.6rem] tracking-[0.3em] mt-1 font-semibold text-gray-300">DESIGNS</div>
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <!-- Removed "BOOK CONSULTATION" button to fix redundancy based on image -->
+                <a href="#contact" class="btn-outline !py-2 !px-5 text-[0.65rem] hover-target">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal-overlay" id="consultation-modal">
+        <div class="modal-content">
+            <button type="button" class="absolute top-6 right-6 text-white/50 hover:text-white text-xl hover-target" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2 class="font-serif text-3xl text-white mb-2">Start Your Project</h2>
+            <p class="text-sm text-gray-400 mb-8 font-light">Tell us about your vision, and our design team will be in touch.</p>
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been submitted.'); closeModal();">
+                <div class="grid grid-cols-2 gap-6">
+                    <div><input type="text" placeholder="First Name" class="form-input hover-target" required></div>
+                    <div><input type="text" placeholder="Last Name" class="form-input hover-target" required></div>
+                </div>
+                <div><input type="email" placeholder="Email Address" class="form-input hover-target" required></div>
+                <div>
+                    <select class="form-input hover-target" required>
+                        <option value="" disabled selected>Project Type</option>
+                        <option value="furniture">Bespoke Furniture</option>
+                        <option value="interior">Full Interior Design</option>
+                        <option value="architecture">Architectural Development</option>
+                    </select>
+                </div>
+                <div><input type="text" placeholder="Property Location (City/Area)" class="form-input hover-target"></div>
+                <div class="pt-4"><button type="submit" class="btn-primary w-full text-center hover-target">SUBMIT INQUIRY</button></div>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <section class="relative min-h-screen flex flex-col justify-center pt-32 pb-24">
+            <div class="video-wrapper">
+                <video autoplay loop muted playsinline>
+                    <source src="https://cdn.coverr.co/videos/coverr-modern-living-room-interior-3286/1080p.mp4" type="video/mp4">
+                    <img src="public/images/hero.png" alt="Hero Background" style="width:100%; height:100%; object-fit:cover;">
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+
+            <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Corrected text alignment to match the image precisely -->
+                    <p class="text-accent text-sm font-bold tracking-[0.3em] mb-6 uppercase reveal delay-100">DESIGN. CRAFT. BUILD.</p>
+                    <h1 class="text-5xl lg:text-7xl font-serif text-white leading-[1.1] mb-8 reveal delay-200">
+                        Designing Spaces. <br>
+                        Building Homes. <br>
+                        Delivering Excellence.
+                    </h1>
+                    <p class="text-gray-300 text-lg mb-10 max-w-xl mx-auto leading-relaxed reveal delay-300 font-light">
+                        Bespoke Furniture. Interior Design & <br>
+                        Architectural Development — <br>
+                        all under one roof.
+                    </p>
+                    <div class="flex justify-center gap-4 reveal delay-400">
+                        <button onclick="openModal()" class="btn-primary hover-target">VIEW WORK</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="press-marquee bg-[#0a0a0a]">
+            <div class="press-track">
+                <span class="press-logo">Architectural Digest</span>
+                <span class="press-logo">Vogue Living</span>
+                <span class="press-logo">Elle Decor</span>
+                <span class="press-logo">The Times</span>
+                <span class="press-logo">Wallpaper*</span>
+                <span class="press-logo">Architectural Digest</span>
+                <span class="press-logo">Vogue Living</span>
+                <span class="press-logo">Elle Decor</span>
+                <span class="press-logo">The Times</span>
+                <span class="press-logo">Wallpaper*</span>
+            </div>
+        </section>
+
+        <section class="py-32 bg-[#141414]">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="font-serif text-4xl text-white mb-4">The Transformation</h2>
+                    <p class="text-gray-400 font-light max-w-2xl mx-auto">Drag the slider to see how we elevate spaces from concept to reality.</p>
+                </div>
+
+                <div class="reveal delay-100">
+                    <div class="ba-slider hover-target" id="ba-slider">
+                        <div class="ba-image ba-after"></div>
+                        <div class="ba-label ba-label-after">After</div>
+                        <div class="ba-image ba-before" id="ba-before"><div class="ba-label ba-label-before">Before</div></div>
+                        <div class="ba-handle" id="ba-handle"><div class="ba-handle-btn"><i class="fa-solid fa-arrows-left-right text-sm"></i></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-[#1a1a1a] text-center border-t border-white/5">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-3xl text-white mb-8">Ready to Transform Your Space?</h2>
+                <button onclick="openModal()" class="btn-primary hover-target">BOOK A CONSULTATION</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', function(e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 100, fill: "forwards" });
+        });
+
+        const hoverTargets = document.querySelectorAll('.hover-target, a, button, input, select');
+        hoverTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            target.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+
+        const slider = document.getElementById('ba-slider');
+        const beforeImg = document.getElementById('ba-before');
+        const handle = document.getElementById('ba-handle');
+        let isDragging = false;
+
+        function updateSlider(e) {
+            if (!isDragging) return;
+            const rect = slider.getBoundingClientRect();
+            let x = (e.clientX || e.touches[0].clientX) - rect.left;
+            x = Math.max(0, Math.min(x, rect.width));
+            const percent = (x / rect.width) * 100;
+            beforeImg.style.width = `${percent}%`;
+            handle.style.left = `${percent}%`;
+        }
+
+        slider.addEventListener('mousedown', () => isDragging = true);
+        slider.addEventListener('touchstart', () => isDragging = true);
+        window.addEventListener('mouseup', () => isDragging = false);
+        window.addEventListener('touchend', () => isDragging = false);
+        window.addEventListener('mousemove', updateSlider);
+        window.addEventListener('touchmove', updateSlider);
+
+        const modal = document.getElementById('consultation-modal');
+        function openModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
