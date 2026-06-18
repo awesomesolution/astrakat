@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 560px;
+  height: 82%;
   background-image: url('../assets/services/hero.webp');
   background-size: cover;
   background-position: center;
@@ -21,14 +21,14 @@
 }
 .shero__overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 560px;
-  background:
-    linear-gradient(90deg, rgba(16, 12, 9, .96) 0%, rgba(16, 12, 9, .75) 32%, rgba(16, 12, 9, .15) 62%, rgba(16, 12, 9, .1) 100%),
-    linear-gradient(0deg, var(--dark) 0%, rgba(16, 12, 9, 0) 45%);
-}
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 84%;
+    background:
+      linear-gradient(90deg, var(--dark) 1%, rgba(15, 11, 8, .82) 5%, rgba(15, 11, 8, .3) 72%, rgba(15, 11, 8, .5) 100%),
+      linear-gradient(0deg, var(--dark) 4%, rgba(15, 11, 8, 0) 34%);
+  }
 .shero__content {
   position: relative;
   z-index: 3;

@@ -10,7 +10,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 56%;
+  left: 0;
   height: 100%;
   background-image: url('../assets/contact/hero-wireframe.webp');
   background-size: cover;
@@ -19,11 +19,14 @@
 }
 .chero__overlay {
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, var(--dark) 26%, rgba(15, 11, 8, .6) 46%, rgba(15, 11, 8, .15) 70%, rgba(15, 11, 8, .35) 100%),
-    linear-gradient(0deg, var(--dark) 1%, rgba(15, 11, 8, 0) 35%);
-}
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background:
+      linear-gradient(90deg, var(--dark) 1%, rgba(15, 11, 8, .82) 5%, rgba(15, 11, 8, .3) 72%, rgba(15, 11, 8, .5) 100%),
+      linear-gradient(0deg, var(--dark) 4%, rgba(15, 11, 8, 0) 34%);
+  }
 .chero__content {
   position: relative;
   z-index: 3;
