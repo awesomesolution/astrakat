@@ -54,6 +54,25 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  /* ---- Bespoke furniture expand / collapse ---- */
+  var svcToggles = [].slice.call(document.querySelectorAll(".svc-card__toggle"));
+  svcToggles.forEach(function (toggle) {
+    var card = toggle.closest(".svc-card");
+    if (!card) return;
+    var textNode = Array.prototype.slice.call(toggle.childNodes).find(function (node) {
+      return node.nodeType === Node.TEXT_NODE;
+    });
+    if (!textNode) return;
+    var collapsedText = toggle.dataset.collapsedText || "VIEW ALL";
+    var expandedText = toggle.dataset.expandedText || "SHOW LESS";
+    toggle.addEventListener("click", function (event) {
+      event.preventDefault();
+      var expanded = card.classList.toggle("svc-card--expanded");
+      toggle.setAttribute("aria-expanded", String(expanded));
+      textNode.nodeValue = (expanded ? expandedText : collapsedText) + " ";
+    });
+  });
+
   /* ---- Portfolio project filter ---- */
   var filters = document.querySelector(".filters");
   if (filters) {
