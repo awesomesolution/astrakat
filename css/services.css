@@ -121,6 +121,56 @@
 .core-card__body p { font-size: 13px; line-height: 1.75; color: var(--muted); margin-bottom: 22px; }
 .core-card .link-btn { justify-content: center; }
 
+/* ---- Bespoke furniture catalogue ---- */
+.bespoke-catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 72px;
+}
+.catalog-card {
+  position: relative;
+  min-height: 190px;
+  overflow: hidden;
+  background: var(--dark);
+  color: #fff;
+}
+.catalog-card::after {
+  content: "";
+  position: absolute;
+  inset: 35% 0 0;
+  background: linear-gradient(0deg, rgba(15, 11, 8, .9), transparent);
+}
+.catalog-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  filter: brightness(.78);
+  transition: transform .5s var(--ease-lux), filter .5s ease;
+}
+.catalog-card:hover img { transform: scale(1.05); filter: brightness(.95); }
+.catalog-card span {
+  position: absolute;
+  z-index: 1;
+  right: 16px;
+  bottom: 14px;
+  left: 16px;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.2;
+}
+.catalog-card b { float: right; color: var(--gold); font-family: var(--sans); font-weight: 400; }
+.catalog-details { display: grid; gap: 72px; padding-bottom: 92px; }
+.catalog-details article { scroll-margin-top: 30px; }
+.catalog-details h3 { font-family: var(--serif); font-size: 30px; font-weight: 600; margin-bottom: 5px; }
+.catalog-details article > p { max-width: 620px; color: var(--muted); font-size: 14px; margin-bottom: 22px; }
+.catalog-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.catalog-gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.service-gallery { padding-bottom: 92px; }
+.service-gallery .section-title { margin-bottom: 36px; }
+.service-gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.service-gallery__grid img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
 /* ---- Process band ---- */
 .process { position: relative; background: var(--dark); color: #fff; padding: 92px 0 96px; overflow: hidden; }
 .process__texture {
@@ -244,6 +294,9 @@
   .step__line { display: none; }
   .cta__overlay { background: rgba(15, 11, 8, .86); }
   .footer__grid--services { grid-template-columns: 1fr 1fr; }
+  .bespoke-catalog { grid-template-columns: repeat(3, 1fr); }
+  .catalog-gallery { grid-template-columns: repeat(2, 1fr); }
+  .service-gallery__grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 760px) {
@@ -252,4 +305,12 @@
   .feature { border-right: 0 !important; border-bottom: 1px solid var(--line); }
   .feature:last-child { border-bottom: 0; }
   .footer__grid--services { grid-template-columns: 1fr; }
+  .bespoke-catalog { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 54px; }
+  .catalog-card, .catalog-card img { min-height: 150px; height: 150px; }
+  .catalog-card span { font-size: 15px; right: 12px; bottom: 11px; left: 12px; }
+  .catalog-details { gap: 50px; }
+  .catalog-details h3 { font-size: 25px; }
+  .service-gallery__grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 }
+.service-gallery--complete { padding-top: 0; }
+.service-gallery--complete .service-gallery__grid img { aspect-ratio: 4 / 3; }

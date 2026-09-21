@@ -156,7 +156,7 @@
         '<div class="form__success" role="status">' +
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>' +
         '<h3>Thank you!</h3>' +
-        "<p>Your consultation request has been received. We'll be in touch within 24 hours.</p>" +
+        "<p>Your enquiry has been received. We'll be in touch within 24 hours.</p>" +
         "</div>";
       form.scrollIntoView({ behavior: "smooth", block: "center" });
     });

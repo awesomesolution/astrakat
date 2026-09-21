@@ -8,6 +8,7 @@
 /* ---- Hero (scaffold lives in common.css; home-specific tweaks below) ---- */
 .hero__bg { background-image: url('../assets/hero-bg.webp'); }
 @media (max-width: 768px) { .hero__bg { background-image: url('../assets/hero-bg-sm.webp'); } }
+.hero__hyphen { font-size: .72em; vertical-align: .08em; }
 .hero__actions { display: flex; gap: 16px; margin-top: 38px; }
 
 /* ---- Feature strip ---- */

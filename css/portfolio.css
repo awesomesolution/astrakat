@@ -5,7 +5,7 @@
    ============================================================= */
 
 /* ---- Hero ---- */
-.hero__bg { background-image: url('../assets/portfolio/hero.webp'); }
+.hero__bg { background-image: url('../assets/projects/Background%20Image.webp'); }
 .hero__lead + .hero__lead { margin-top: 16px; }
 
 /* Philosophy feature strip (over the dark hero) */
@@ -20,7 +20,7 @@
   display: flex;
   gap: 16px;
   padding: 6px 32px;
-  border-left: 1px solid rgba(255, 255, 255, .1);
+  border-left: 0;
 }
 .feature:first-child { border-left: none; padding-left: 0; }
 .feature__icon { flex-shrink: 0; color: var(--gold); }
