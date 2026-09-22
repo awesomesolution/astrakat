@@ -83,8 +83,16 @@
     return image.replace(/\.(png|webp)$/i, '').replace(/\b\w/g, letter => letter.toUpperCase());
   };
 
-  const siteHeader = () => `<a class="skip-link" href="#main">Skip to content</a><header class="site-header" id="siteHeader"><nav class="nav container"><a href="index.html" class="brand"><span class="brand__name">AstraKAT</span><span class="brand__sub">D E S I G N S</span></a><ul class="nav__links" id="navLinks"><li><a href="index.html">HOME</a></li><li><a href="about.html">ABOUT</a></li><li><a href="services.html" class="active" aria-current="page">SERVICES</a></li><li><a href="projects.html">PROJECTS</a></li><li><a href="contact.html">CONTACT</a></li></ul><div class="nav__right"><a href="contact.html#schedule" class="btn btn--gold btn--sm">SEND AN ENQUIRY</a><a href="https://wa.me/447344337970" class="nav__wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.519 5.26l-.999 3.648 3.97-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a><button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></nav></header>`;
-  const siteFooter = () => `<footer class="footer" id="contact"><div class="container footer__grid footer__grid--home"><div class="footer__brand"><span class="brand__name">AstraKAT</span><span class="brand__sub">D E S I G N S</span><p>AstraKAT brings your dream spaces to life through bespoke design, craftsmanship and architecture excellence.</p></div><div class="footer__col"><h5>QUICK LINKS</h5><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="careers.html">Careers</a></li></ul></div><div class="footer__col"><h5>SERVICES</h5><ul><li><a href="bespoke-furniture.html">Bespoke Furniture</a></li><li><a href="interior-design.html">Interior Design</a></li><li><a href="architectural-development.html">Architectural Development</a></li></ul></div><div class="footer__col"><h5>AREAS WE COVER</h5><ul><li>London</li><li>Surrey</li><li>Hertfordshire</li><li>Berkshire</li><li>&amp; Surrounding Areas</li></ul></div><div class="footer__cta footer__cta--home"><h4>Ready to Transform Your Space?</h4><p>Send an enquiry to our design experts today.</p><a href="contact.html#schedule" class="btn btn--gold btn--block">SEND AN ENQUIRY</a><a href="https://wa.me/447344337970" class="btn btn--gold-outline btn--block" target="_blank" rel="noopener">CHAT ON WHATSAPP</a></div></div><div class="footer__bar"><div class="container footer__bar-inner"><span>&copy; 2025 AstraKAT Designs Limited. All Rights Reserved.</span><div class="footer__legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div></div></div></footer>`;
+  const siteHeader = (active = 'services') => {
+    const isHome = active === 'home';
+    const isAbout = active === 'about';
+    const isServices = active === 'services';
+    const isProjects = active === 'projects';
+    const isCareers = active === 'careers';
+    const isContact = active === 'contact';
+    return `<a class="skip-link" href="#main">Skip to content</a><header class="site-header" id="siteHeader"><nav class="nav container"><a href="index.html" class="brand"><span class="brand__name">AstraKAT</span><span class="brand__sub">D E S I G N S</span></a><ul class="nav__links" id="navLinks"><li><a href="index.html"${isHome ? ' class="active" aria-current="page"' : ''}>HOME</a></li><li><a href="about.html"${isAbout ? ' class="active" aria-current="page"' : ''}>ABOUT</a></li><li><a href="services.html"${isServices ? ' class="active" aria-current="page"' : ''}>SERVICES</a></li><li><a href="projects.html"${isProjects ? ' class="active" aria-current="page"' : ''}>PROJECTS</a></li><li><a href="careers.html"${isCareers ? ' class="active" aria-current="page"' : ''}>CAREERS</a></li><li><a href="contact.html"${isContact ? ' class="active" aria-current="page"' : ''}>CONTACT</a></li></ul><div class="nav__right"><a href="contact.html#schedule" class="btn btn--gold btn--sm">SEND AN ENQUIRY</a><a href="https://wa.me/447344337970" class="nav__wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.519 5.26l-.999 3.648 3.97-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a><button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></div></nav></header>`;
+  };
+  const siteFooter = () => `<footer class="footer" id="contact"><div class="container footer__grid footer__grid--home"><div class="footer__brand"><span class="brand__name">AstraKAT</span><span class="brand__sub">D E S I G N S</span><p>AstraKAT brings your dream spaces to life through bespoke design, craftsmanship and architecture excellence.</p></div><div class="footer__col"><h5>QUICK LINKS</h5><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact Us</a></li></ul></div><div class="footer__col"><h5>SERVICES</h5><ul><li><a href="bespoke-furniture.html">Bespoke Furniture</a></li><li><a href="interior-design.html">Interior Design</a></li><li><a href="architectural-development.html">Architectural Development</a></li></ul></div><div class="footer__col"><h5>AREAS WE COVER</h5><ul><li>London</li><li>Surrey</li><li>Hertfordshire</li><li>Berkshire</li><li>&amp; Surrounding Areas</li></ul></div><div class="footer__cta footer__cta--home"><h4>Ready to Transform Your Space?</h4><p>Send an enquiry to our design experts today.</p><a href="contact.html#schedule" class="btn btn--gold btn--block">SEND AN ENQUIRY</a><a href="https://wa.me/447344337970" class="btn btn--gold-outline btn--block" target="_blank" rel="noopener">CHAT ON WHATSAPP</a></div></div><div class="footer__bar"><div class="container footer__bar-inner"><span>&copy; 2025 AstraKAT Designs Limited. All Rights Reserved.</span><div class="footer__legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div></div></div></footer>`;
 
   const refreshSiteHeader = () => {
     const header = document.getElementById('siteHeader');
@@ -111,6 +119,11 @@
     const page = pageData[key];
     if (!page) return;
     document.body.classList.add('new-page');
+    if (key === 'careers') {
+      renderCareers();
+      refreshSiteHeader();
+      return;
+    }
     if (key === 'bespoke') {
       renderBespokeFurniture();
       refreshSiteHeader();
@@ -203,7 +216,7 @@
     const processMarkup = narrative.process.map((step, index) => `<article class="np-process-card"><b>${String(index + 1).padStart(2, '0')}</b><h3>${escapeHtml(step)}</h3><p>${escapeHtml(index === 0 ? 'We understand your space, needs and aspirations.' : index === 1 ? 'We develop a clear, tailored design direction.' : index === 2 ? 'We refine materials, details and practical requirements.' : index === 3 ? 'We coordinate the details that bring the design to life.' : 'A finished space made to feel entirely yours.')}</p></article>`).join('');
     const contentMarkup = `<section class="np-purpose"><div><span class="np-eyebrow">${escapeHtml(narrative.label)}</span><h2>${escapeHtml(narrative.heading)}</h2><p>${escapeHtml(narrative.body)}</p><a class="np-button" href="contact.html">DISCUSS YOUR PROJECT <span>&rarr;</span></a></div><div class="np-purpose__detail"><span class="np-eyebrow">It is in the details</span><h2>${escapeHtml(narrative.detailHeading)}</h2><p>${escapeHtml(narrative.detailBody)}</p><ul><li>Thoughtful planning</li><li>Premium materials</li><li>Practical functionality</li><li>Timeless finishes</li></ul></div></section><section class="np-process"><span class="np-eyebrow">Our design process</span><h2>From first idea to final detail.</h2><div class="np-process-grid">${processMarkup}</div></section>`;
     document.body.innerHTML = `
-      ${siteHeader()}
+      ${siteHeader(key === 'projects' ? 'projects' : key === 'careers' ? 'careers' : 'services')}
       <section class="np-hero" style="--hero-image:url('${imagePath(hero.image)}');--cta-image:url('${imagePath(images[images.length - 1].image)}')"><div class="np-hero__content"><span class="np-kicker">${escapeHtml(page.kicker)}</span><h1>${escapeHtml(page.title)}</h1><p>${escapeHtml(page.intro)}</p><a class="np-button" href="contact.html">BOOK A CONSULTATION</a></div></section>
       <main><section class="np-section"><div class="np-intro"><img src="${imagePath(gallery[0].image)}" alt="${escapeHtml(page.title)}"><div><span class="np-eyebrow">AstraKAT Designs</span><h2>${escapeHtml(narrative.heading)}</h2><p class="np-lead">${escapeHtml(narrative.body)}</p></div></div></section>${contentMarkup}<section class="np-section np-section--alt"><div class="np-section__inner"><span class="np-eyebrow">The complete project</span><h2>Considered details from top to bottom.</h2><div class="np-gallery">${gallery.slice(1).map(({ image, index }) => { const caption = escapeHtml(getImageLabel(key, image, index + 1)); const card = `<figure><img src="${imagePath(image)}" alt="${caption}" loading="lazy"><figcaption>${caption}</figcaption></figure>`; return detailLinks[image] && key === 'services' ? `<a href="${detailLinks[image]}">${card}</a>` : card; }).join('')}</div></div></section></main><section class="np-cta" style="--cta-image:url('${imagePath(images[images.length - 1].image)}')"><h2>Ready to create something exceptional?</h2><p>Tell us about your space and we will help you take the next step.</p><a class="np-button" href="contact.html">START YOUR PROJECT</a></section>${siteFooter()}`;
     refreshSiteHeader();
@@ -450,6 +463,145 @@
       ${siteHeader()}
       <section class="bu-hero" style="--bu-image:url('${asset('Background Image.webp')}')"><div class="bu-hero__content"><span class="np-kicker">Bespoke Bar Units</span><h1>Raise the<br>Everyday.</h1><p>Beautifully designed bar units that bring style, functionality and a touch of luxury to your home. Tailored to your space, lifestyle and entertaining needs.</p><a class="np-button" href="contact.html">BOOK A FREE DESIGN CONSULTATION <span>&rarr;</span></a><small>Bar units &nbsp;·&nbsp; Made to measure &nbsp;·&nbsp; London &amp; across England</small></div></section>
       <main><section class="bu-intro"><img src="${asset('Second Image.webp')}" alt="Bespoke bar unit" loading="lazy"><div><span class="np-eyebrow">Tailored to your home</span><h2>Bespoke Bar Units<br>for Modern Living.</h2><p>Whether you love entertaining guests or simply enjoy a quiet drink at home, a bespoke bar unit adds sophistication and convenience to your space.</p><p>At AstraKAT Designs, we create bar units that are tailored to your style, space and storage needs. From sleek minimalist designs to bold statement pieces, we combine practical storage with beautiful finishes.</p><p>Every bar unit is made to measure, ensuring a seamless fit and a design that complements your home.</p></div></section><section class="bu-styles"><span class="np-eyebrow">Explore the styles</span><h2>Bar Units Designed Your Way.</h2><div class="bu-style-grid">${options}</div></section><section class="bu-detail"><div><span class="np-eyebrow">More than just storage</span><h2>A Space to Unwind.<br>A Space to Impress.</h2><p>Our bespoke bar units are designed to bring people together, creating a stylish focal point for your dining area, living room or entertainment space.</p><p>Choose from a range of finishes, worktops, lighting options and storage features - including wine racks, glass holders, drawers and integrated fridges.</p><p>Let us help you create a bar unit that’s as functional as it is beautiful.</p></div><img src="${asset('Second last image.webp')}" alt="Bar unit detail" loading="lazy"></section><section class="bu-process"><span class="np-eyebrow">Our process</span><h2>From Your Ideas to the Perfect Bar Unit.</h2><div class="bu-process-grid">${stepMarkup}</div></section><section class="bu-benefits"><span class="np-eyebrow">Why choose AstraKAT Designs?</span><h2>Stylish Spaces for Better Living.</h2><div class="bu-benefit-grid">${benefits}</div></section></main><section class="bu-cta" style="--bu-image:url('${asset('Last Image.webp')}')"><div><h2>Ready to Create Your Perfect Bar Unit?</h2><p>Let's design a space that fits your home - and your lifestyle - beautifully.</p><a class="np-button" href="contact.html">BOOK A FREE DESIGN CONSULTATION <span>&rarr;</span></a></div></section>${siteFooter()}`;
+  }
+
+  function renderCareers() {
+    const bgHero = resolveAsset('assets/careers/career-background.webp');
+    const imgDetail = resolveAsset('assets/careers/career-detail.webp');
+    const bgCta = resolveAsset('assets/careers/career-cta.webp');
+
+    document.body.innerHTML = `
+      ${siteHeader('careers')}
+      <section class="cr-hero" style="--cr-hero-image:url('${bgHero}')">
+        <div class="cr-hero__content">
+          <span class="np-kicker">CAREERS AT ASTRAKAT</span>
+          <h1>Build a Career<br>in Beautiful Spaces</h1>
+          <p>Join a passionate team that designs, creates and installs bespoke interiors, helping people transform their homes.</p>
+          <a class="np-button" href="#opportunities">EXPLORE OPPORTUNITIES <span>&rarr;</span></a>
+        </div>
+      </section>
+
+      <section class="cr-perks-strip">
+        <div class="cr-perks-container">
+          <div class="cr-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <span>A SUPPORTIVE<br>TEAM CULTURE</span>
+          </div>
+          <div class="cr-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+              <path d="M12 2v1"/>
+              <path d="M12 7a5 5 0 0 0-3.54 8.54c.46.46.74 1.09.74 1.74v.72h5.6v-.72c0-.65.28-1.28.74-1.74A5 5 0 0 0 12 7z"/>
+              <path d="M4.93 4.93l.7.7"/>
+              <path d="M18.36 5.64l.71-.71"/>
+            </svg>
+            <span>OPPORTUNITIES<br>TO GROW</span>
+          </div>
+          <div class="cr-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 3h12l4 6-10 12L2 9l4-6z"/>
+              <path d="M2 9h20"/>
+              <path d="M10 3l2 6 2-6"/>
+            </svg>
+            <span>WORK ON UNIQUE<br>PROJECTS</span>
+          </div>
+          <div class="cr-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            </svg>
+            <span>MAKE A REAL<br>DIFFERENCE</span>
+          </div>
+        </div>
+      </section>
+
+      <main id="main">
+        <section class="cr-workplace">
+          <div class="cr-workplace__copy">
+            <span class="np-eyebrow">OUR PEOPLE, OUR STRENGTH</span>
+            <h2>More Than a Workplace</h2>
+            <p>At AstraKAT Designs, we're a close-knit team with a shared passion for design, quality and great customer experiences. We value creativity, reliability and a positive attitude, and we believe in supporting each other to grow.</p>
+            <p>Whether you're on site, in the design studio or behind the scenes, you'll be part of a team that takes pride in turning ideas into beautifully crafted spaces.</p>
+            <a class="cr-outline-btn" href="about.html">OUR CULTURE <span>&rarr;</span></a>
+          </div>
+          <div class="cr-workplace__media">
+            <img src="${imgDetail}" alt="AstraKAT Designs culture and studio details" loading="lazy">
+          </div>
+        </section>
+
+        <section class="cr-opportunities" id="opportunities">
+          <div class="cr-opportunities__inner">
+            <span class="np-eyebrow">JOIN OUR TEAM</span>
+            <h2>Current Opportunity</h2>
+            <div class="cr-jobs-grid">
+              <article class="cr-job-card">
+                <h3>Business Development Manager</h3>
+                <div class="cr-job-meta">
+                  <span class="cr-job-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 12v.01"/></svg>
+                    Full-time
+                  </span>
+                  <span class="cr-job-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.35-7-10a7 7 0 1 1 14 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+                    London (On-site)
+                  </span>
+                </div>
+                <p>Help us grow by building relationships, generating new business and supporting our expanding projects.</p>
+                <a class="cr-outline-btn" href="mailto:careers@astrakatdesigns.com?subject=Application%20for%20Business%20Development%20Manager%20-%20AstraKAT%20Designs">APPLY NOW <span>&rarr;</span></a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="cr-why">
+          <div class="cr-why__inner">
+            <div class="cr-why__lead">
+              <span class="np-eyebrow" style="color:#d4a66f;">WHY JOIN ASTRAKAT</span>
+              <h2>A Place to Grow</h2>
+              <p>We offer a friendly and collaborative environment where your ideas are valued, your skills are nurtured and your work makes a real impact in people's homes across the UK.</p>
+            </div>
+            <div class="cr-why__benefits">
+              <article class="cr-benefit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+                <span>Competitive<br>Salary</span>
+              </article>
+              <article class="cr-benefit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/><path d="m14 9 5-1-1 5"/></svg>
+                <span>Training &amp;<br>Development</span>
+              </article>
+              <article class="cr-benefit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>Flexible<br>Working</span>
+              </article>
+              <article class="cr-benefit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span>Supportive<br>Team</span>
+              </article>
+              <article class="cr-benefit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Be Part of a<br>Growing Brand</span>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="cr-cta" style="--cr-cta-image:url('${bgCta}')">
+        <div class="cr-cta__inner">
+          <span class="np-kicker">READY FOR A NEW CHAPTER?</span>
+          <h2>Let's Create Amazing Spaces Together</h2>
+          <a class="np-button" href="mailto:careers@astrakatdesigns.com?subject=Job%20Application%20-%20AstraKAT%20Designs">APPLY NOW <span>&rarr;</span></a>
+        </div>
+      </section>
+
+      ${siteFooter()}
+    `;
   }
 
   document.addEventListener('DOMContentLoaded', render);
