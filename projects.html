@@ -4,22 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preload" as="image" href="assets/projects/Background Image.webp" fetchpriority="high" />
-  <title>Projects — AstraKAT Designs</title>
-  <meta name="description" content="Explore AstraKAT Designs projects, from bespoke furniture and interiors to architectural development." />
+  <title>Our Work — Projects | AstraKAT Designs</title>
+  <meta name="description" content="Explore AstraKAT Designs curated collection of real homes — from bespoke kitchens and fitted wardrobes to complete home transformations." />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://www.astrakatdesigns.com/projects.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/projects.css" />
   <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/projects.css" />
   <script src="js/site.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
   <header class="site-header" id="siteHeader">
     <nav class="nav container">
-      <a href="index.html" class="brand"><span class="brand__name">AstraKAT</span><span class="brand__sub">D E S I G N S</span></a>
+      <a href="index.html" class="brand">
+        <span class="brand__name">AstraKAT</span>
+        <span class="brand__sub">D E S I G N S</span>
+      </a>
       <ul class="nav__links" id="navLinks">
         <li><a href="index.html">HOME</a></li>
         <li><a href="about.html">ABOUT</a></li>
@@ -29,105 +35,486 @@
         <li><a href="contact.html">CONTACT</a></li>
       </ul>
       <div class="nav__right">
-        <a href="contact.html#schedule" class="btn btn--outline btn--sm">SEND AN ENQUIRY</a>
-        <a href="https://wa.me/447344337970" class="nav__wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">CHAT</a>
-        <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+        <a href="contact.html#schedule" class="btn btn--gold btn--sm">SEND AN ENQUIRY</a>
+        <a href="https://wa.me/447344337970" class="nav__wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.519 5.26l-.999 3.648 3.97-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
       </div>
     </nav>
   </header>
 
-  <section class="projects-hero">
-    <div class="projects-hero__image"></div>
-    <div class="projects-hero__overlay"></div>
-    <div class="container projects-hero__content">
-      <p class="eyebrow">OUR WORK</p>
-      <h1>Projects designed<br />around real life.</h1>
-      <p>Explore a selection of bespoke furniture, interior design and architectural work created with clarity, craft and care.</p>
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="pj-hero" id="hero">
+    <div class="pj-hero__bg"></div>
+    <div class="pj-hero__overlay"></div>
+    <div class="pj-hero__content">
+      <div class="pj-hero__main">
+        <span class="pj-kicker">OUR WORK</span>
+        <h1>Spaces That<br />Tell Real Stories.</h1>
+        <p>Explore a curated collection of real homes designed and delivered by AstraKAT Designs. From elegant kitchens and bespoke wardrobes to complete home transformations, every project reflects our passion for thoughtful design and exceptional detail.</p>
+        <a href="contact.html#schedule" class="pj-hero__btn">
+          BOOK A FREE CONSULTATION <span>&rarr;</span>
+        </a>
+        <div class="pj-hero__tags">
+          <span>HOMES</span> &nbsp;|&nbsp;
+          <span>SPACES</span> &nbsp;|&nbsp;
+          <span>PEOPLE</span> &nbsp;|&nbsp;
+          <span>STORIES</span>
+        </div>
+      </div>
+      <div class="pj-hero__script" aria-hidden="true">
+        Beautiful<br />Spaces<br />Happier<br />Lives
+      </div>
     </div>
   </section>
 
   <main id="main">
-    <section class="projects-intro container">
-      <p class="eyebrow eyebrow--center">SELECTED PROJECTS</p>
-      <h2 class="section-title">Thoughtful spaces. Considered details.</h2>
-      <p class="projects-intro__lead">Every project is shaped around the people who use it, from the first conversation through to the final installation.</p>
+    <!-- ===================== EXPLORE OUR PROJECTS ===================== -->
+    <section class="pj-explore" id="projects">
+      <div class="pj-explore__container">
+        <div class="pj-explore__header">
+          <span class="pj-eyebrow-dash">— EXPLORE OUR PROJECTS —</span>
+          <h2>Real Homes. Remarkable Transformations.</h2>
+          <span class="pj-explore__script" aria-hidden="true">More<br />than just<br />interiors</span>
+        </div>
+
+        <!-- Filter Tabs -->
+        <nav class="pj-filters" aria-label="Filter projects by space" role="tablist">
+          <button class="pj-filter is-active" data-filter="all" role="tab" aria-selected="true">ALL</button>
+          <button class="pj-filter" data-filter="kitchens" role="tab" aria-selected="false">KITCHENS</button>
+          <button class="pj-filter" data-filter="wardrobes" role="tab" aria-selected="false">WARDROBES</button>
+          <button class="pj-filter" data-filter="living-spaces" role="tab" aria-selected="false">LIVING SPACES</button>
+          <button class="pj-filter" data-filter="bedrooms" role="tab" aria-selected="false">BEDROOMS</button>
+          <button class="pj-filter" data-filter="bathrooms" role="tab" aria-selected="false">BATHROOMS</button>
+          <button class="pj-filter" data-filter="home-offices" role="tab" aria-selected="false">HOME OFFICES</button>
+          <button class="pj-filter" data-filter="bars" role="tab" aria-selected="false">BARS &amp; ENTERTAINMENT</button>
+          <button class="pj-filter" data-filter="full-home" role="tab" aria-selected="false">FULL HOME</button>
+        </nav>
+
+        <!-- 3x3 Project Grid -->
+        <div class="pj-grid" id="projectGrid">
+          <!-- 1. Kitchens -->
+          <a class="pj-card" href="kitchen.html" data-category="kitchens">
+            <div class="pj-card__media">
+              <img src="assets/projects/1.webp" alt="Bespoke Kitchen design" class="pj-card__img" loading="lazy" />
+              <div class="pj-card__overlay"></div>
+            </div>
+            <div class="pj-card__body">
+              <div class="pj-card__info">
+                <h3>Kitchens</h3>
+                <p>Stylish. Functional. Timeless.</p>
+              </div>
+              <span class="pj-card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 2. Fitted Wardrobes -->
+          <a class="pj-card" href="fitted-wardrobes.html" data-category="wardrobes">
+            <div class="pj-card__media">
+              <img src="assets/projects/2.webp" alt="Bespoke Fitted Wardrobes and Walk-in Closet" class="pj-card__img" loading="lazy" />
+              <div class="pj-card__overlay"></div>
+            </div>
+            <div class="pj-card__body">
+              <div class="pj-card__info">
+                <h3>Fitted Wardrobes</h3>
+                <p>Storage. Style. Seamless.</p>
+              </div>
+              <span class="pj-card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 3. Living Spaces -->
+          <a class="pj-card" href="media-wall.html" data-category="living-spaces">
+            <div class="pj-card__media">
+              <img src="assets/projects/3.webp" alt="Bespoke Living Spaces and Media Walls" class="pj-card__img" loading="lazy" />
+              <div class="pj-card__overlay"></div>
+            </div>
+            <div class="pj-card__body">
+              <div class="pj-card__info">
+                <h3>Living Spaces</h3>
+                <p>Designed for togetherness.</p>
+              </div>
+              <span class="pj-card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 4. Bedrooms -->
+          <a class="pj-card" href="bed-and-headboard.html" data-category="bedrooms">
+            <div class="pj-card__media">
+              <img src="assets/projects/4.webp" alt="Bespoke Bedrooms and Statement Headboards" class="pj-card__img" loading="lazy" />
+              <div class="pj-card__overlay"></div>
+            </div>
+            <div class="pj-card__body">
+              <div class="pj-card__info">
+                <h3>Bedrooms</h3>
+                <p>A sanctuary, your way.</p>
+              </div>
+              <span class="pj-card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 5. Bathrooms -->
+          <a class="pj-card" href="interior-design.html" data-category="bathrooms">
+            <div class="pj-card__media">
+              <img src="assets/projects/5.webp" alt="Luxury Bathroom Interior Design" class="pj-card__img" loading="lazy" />
+              <div class="pj-card__overlay"></div>
+            </div>
+            <div class="pj-card__body">
+              <div class="pj-card__info">
+                <h3>Bathrooms</h3>
+                <p>Everyday luxury.</p>
+              </div>
+              <span class="pj-card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 6. Home Offices -->
+          <a class="pj-card" href="study-table.html" data-category="home-offices">
+            <div class="pj-card__media">
+              <img src="assets/projects/6.webp" alt="Bespoke Home Office and Study Desks" class="pj-card__img" loading="lazy" />
+              <div class="pj-card__overlay"></div>
+            </div>
+            <div class="pj-card__body">
+              <div class="pj-card__info">
+                <h3>Home Offices</h3>
+                <p>Work. Focus. Create.</p>
+              </div>
+              <span class="pj-card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 7. Bars & Entertainment -->
+          <a class="pj-card" href="bar-unit.html" data-category="bars">
+            <div class="pj-card__media">
+              <img src="assets/projects/7.webp" alt="Bespoke Home Bars and Entertaining Units" class="pj-card__img" loading="lazy" />
+              <div class="pj-card__overlay"></div>
+            </div>
+            <div class="pj-card__body">
+              <div class="pj-card__info">
+                <h3>Bars &amp; Entertainment</h3>
+                <p>Made for memorable moments.</p>
+              </div>
+              <span class="pj-card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 8. Hallways & Entrances -->
+          <a class="pj-card" href="interior-design.html" data-category="hallways living-spaces full-home">
+            <div class="pj-card__media">
+              <img src="assets/projects/8.webp" alt="Luxury Hallway and Entrance Interior Design" class="pj-card__img" loading="lazy" />
+              <div class="pj-card__overlay"></div>
+            </div>
+            <div class="pj-card__body">
+              <div class="pj-card__info">
+                <h3>Hallways &amp; Entrances</h3>
+                <p>Make a lasting first impression.</p>
+              </div>
+              <span class="pj-card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 9. Complete Homes -->
+          <a class="pj-card" href="architectural-development.html" data-category="full-home">
+            <div class="pj-card__media">
+              <img src="assets/projects/9.webp" alt="Complete Home Architectural Development and Interior Transformation" class="pj-card__img" loading="lazy" />
+              <div class="pj-card__overlay"></div>
+            </div>
+            <div class="pj-card__body">
+              <div class="pj-card__info">
+                <h3>Complete Homes</h3>
+                <p>From vision to reality.</p>
+              </div>
+              <span class="pj-card__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section class="project-grid container" aria-label="Project gallery">
-      <a class="project-card project-card--wide" href="#wimbledon-house">
-        <img src="assets/projects/1.webp" alt="Wimbledon House project" loading="lazy" />
-        <span><b>Wimbledon House</b><small>Interior Design</small></span>
-      </a>
-      <a class="project-card" href="#iver-house">
-        <img src="assets/projects/2.webp" alt="Iver House project" loading="lazy" />
-        <span><b>Iver House</b><small>Bespoke Furniture</small></span>
-      </a>
-      <a class="project-card" href="#east-putney-mansion">
-        <img src="assets/projects/3.webp" alt="East Putney Mansion project" loading="lazy" />
-        <span><b>East Putney Mansion</b><small>Interior Design</small></span>
-      </a>
-      <a class="project-card" href="#project-four">
-        <img src="assets/projects/4.webp" alt="Residential interior project" loading="lazy" />
-        <span><b>Hampstead Residence</b><small>Residential Interior</small></span>
-      </a>
-      <a class="project-card project-card--tall" href="#project-five">
-        <img src="assets/projects/5.webp" alt="Bespoke furniture project" loading="lazy" />
-        <span><b>Richmond Townhouse</b><small>Bespoke Furniture</small></span>
-      </a>
-      <a class="project-card" href="#project-six">
-        <img src="assets/projects/6.webp" alt="Architectural development project" loading="lazy" />
-        <span><b>Surrey Garden House</b><small>Architectural Development</small></span>
-      </a>
-      <a class="project-card" href="#project-seven">
-        <img src="assets/projects/7.webp" alt="Kitchen project" loading="lazy" />
-        <span><b>Fulham Kitchen</b><small>Bespoke Furniture</small></span>
-      </a>
-      <a class="project-card project-card--wide" href="#project-eight">
-        <img src="assets/projects/8.webp" alt="Walk-in wardrobe project" loading="lazy" />
-        <span><b>Chiswick Dressing Suite</b><small>Bespoke Furniture</small></span>
-      </a>
-      <a class="project-card" href="#project-nine">
-        <img src="assets/projects/9.webp" alt="Media wall project" loading="lazy" />
-        <span><b>Clapham Media Wall</b><small>Bespoke Furniture</small></span>
-      </a>
-      <a class="project-card" href="#project-ten">
-        <img src="assets/projects/10.webp" alt="Architectural project" loading="lazy" />
-        <span><b>Esher Extension</b><small>Architectural Development</small></span>
-      </a>
+    <!-- ===================== STATS STRIP ===================== -->
+    <section class="pj-stats" aria-label="AstraKAT Achievements">
+      <div class="pj-stats__container">
+        <!-- 1 -->
+        <article class="pj-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span class="pj-stat__value">50+</span>
+          <span class="pj-stat__label">Homes Designed</span>
+        </article>
+
+        <!-- 2 -->
+        <article class="pj-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+            <path d="M2 2l7.586 7.586"/>
+            <circle cx="11" cy="11" r="2"/>
+          </svg>
+          <span class="pj-stat__value">100+</span>
+          <span class="pj-stat__label">Rooms Transformed</span>
+        </article>
+
+        <!-- 3 -->
+        <article class="pj-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <span class="pj-stat__value">100%</span>
+          <span class="pj-stat__label">Client Satisfaction</span>
+        </article>
+
+        <!-- 4 -->
+        <article class="pj-stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 3h12l4 6-10 12L2 9l4-6z"/>
+            <path d="M2 9h20"/>
+            <path d="M10 3l2 6 2-6"/>
+          </svg>
+          <span class="pj-stat__value">End-to-End</span>
+          <span class="pj-stat__label">Design &amp; Build Support</span>
+        </article>
+      </div>
     </section>
 
-    <section class="project-notes container" aria-label="Project details">
-      <article id="wimbledon-house"><h2>Wimbledon House</h2><p>A calm, tailored interior where joinery, material and light work together to make everyday living feel effortless.</p></article>
-      <article id="iver-house"><h2>Iver House</h2><p>Made-to-measure furniture designed around the architecture, storage needs and rhythm of the home.</p></article>
-      <article id="east-putney-mansion"><h2>East Putney Mansion</h2><p>Layered interior design balancing character, function and contemporary comfort.</p></article>
-      <article id="project-four"><h2>Hampstead Residence</h2><p>Refined residential design with considered proportions and lasting materials.</p></article>
-      <article id="project-five"><h2>Richmond Townhouse</h2><p>Bespoke cabinetry and furniture that make every room work harder.</p></article>
-      <article id="project-six"><h2>Surrey Garden House</h2><p>Architectural thinking and interior detail brought together as one cohesive home.</p></article>
-      <article id="project-seven"><h2>Fulham Kitchen</h2><p>A kitchen planned for hosting, storage and the practical flow of daily life.</p></article>
-      <article id="project-eight"><h2>Chiswick Dressing Suite</h2><p>Personalised wardrobe and dressing space with elegant, organised storage.</p></article>
-      <article id="project-nine"><h2>Clapham Media Wall</h2><p>Integrated living-room joinery that combines technology, display and hidden storage.</p></article>
-      <article id="project-ten"><h2>Esher Extension</h2><p>Thoughtful architectural development designed to add space, value and natural connection.</p></article>
+    <!-- ===================== SPLIT FEATURE & TESTIMONIAL ===================== -->
+    <section class="pj-split">
+      <div class="pj-split__grid">
+        <!-- Left Media -->
+        <div class="pj-split__media">
+          <img src="assets/projects/10.webp" alt="Designing Spaces People Love to Live In" class="pj-split__img" loading="lazy" />
+          <div class="pj-split__media-overlay"></div>
+          <div class="pj-split__media-content">
+            <h2>Designing<br />Spaces People<br />Love to Live In.</h2>
+          </div>
+        </div>
+
+        <!-- Right Testimonial -->
+        <div class="pj-split__testimonial">
+          <span class="pj-quote-mark" aria-hidden="true">“</span>
+          <div class="pj-quote-track" id="testimonialTrack">
+            <!-- Slide 1 -->
+            <div class="pj-quote-slide" data-slide="0">
+              <p class="pj-quote-body">AstraKAT Designs truly understood our lifestyle and created a home that’s both beautiful and functional. The attention to detail was exceptional.</p>
+              <p class="pj-quote-author">— S. PATEL, LONDON</p>
+            </div>
+            <!-- Slide 2 -->
+            <div class="pj-quote-slide is-hidden" data-slide="1">
+              <p class="pj-quote-body">From initial concept sketches to the final installation of our kitchen and wardrobes, every milestone was delivered with exquisite craftsmanship and care.</p>
+              <p class="pj-quote-author">— M. DAVIES, SURREY</p>
+            </div>
+            <!-- Slide 3 -->
+            <div class="pj-quote-slide is-hidden" data-slide="2">
+              <p class="pj-quote-body">A seamless experience throughout. Our living spaces and media unit have completely elevated our home. We could not be happier with the outcome.</p>
+              <p class="pj-quote-author">— R. SHARMA, WIMBLEDON</p>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="pj-carousel-ctrls">
+            <div class="pj-carousel-ctrls__left">
+              <button class="pj-carousel-btn" id="prevQuote" type="button" aria-label="Previous testimonial">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <span class="pj-carousel-line" aria-hidden="true"></span>
+            </div>
+            <div class="pj-carousel-ctrls__right">
+              <div class="pj-carousel-dots" id="quoteDots">
+                <button class="pj-carousel-dot is-active" type="button" aria-label="Slide 1" data-dot="0"></button>
+                <button class="pj-carousel-dot" type="button" aria-label="Slide 2" data-dot="1"></button>
+                <button class="pj-carousel-dot" type="button" aria-label="Slide 3" data-dot="2"></button>
+              </div>
+              <button class="pj-carousel-btn" id="nextQuote" type="button" aria-label="Next testimonial">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6 6-6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="projects-cta">
-      <div class="projects-cta__image"></div>
-      <div class="projects-cta__overlay"></div>
-      <div class="container projects-cta__content">
-        <h2>Have a project in mind?</h2>
-        <p>Tell us what you are planning and we’ll help you take the next step.</p>
-        <a href="contact.html#schedule" class="btn btn--gold">SEND AN ENQUIRY <span>&rarr;</span></a>
+    <!-- ===================== BOTTOM CTA BANNER ===================== -->
+    <section class="pj-cta">
+      <div class="pj-cta__bg"></div>
+      <div class="pj-cta__overlay"></div>
+      <div class="pj-cta__container">
+        <div class="pj-cta__content">
+          <span class="pj-kicker">READY TO CREATE YOURS?</span>
+          <h2>Let’s Bring Your Vision to Life.</h2>
+          <p>Book a free consultation and take the first step towards your dream space.</p>
+          <a href="contact.html#schedule" class="pj-hero__btn">
+            BOOK A FREE CONSULTATION <span>&rarr;</span>
+          </a>
+        </div>
+        <div class="pj-cta__keywords" aria-hidden="true">
+          <span>HOMES</span>
+          <span>PEOPLE</span>
+          <span>STORIES</span>
+          <span>BETTER LIVING</span>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__grid footer__grid--projects">
-      <div class="footer__brand"><span class="brand__name">AstraKAT</span><span class="brand__sub">D E S I G N S</span><p>Creating refined living spaces through bespoke design, craftsmanship and architectural excellence.</p></div>
-      <div class="footer__col"><h5>SERVICES</h5><ul><li><a href="bespoke-furniture.html">Bespoke Furniture</a></li><li><a href="interior-design.html">Interior Design</a></li><li><a href="architectural-development.html">Architectural Development</a></li></ul></div>
-      <div class="footer__col"><h5>QUICK LINKS</h5><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer__col footer__contact"><h5>CONTACT</h5><ul><li>info@astrakatdesigns.com</li><li>07344 337 970</li><li>London, United Kingdom</li></ul></div>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid footer__grid--home">
+      <div class="footer__brand">
+        <span class="brand__name">AstraKAT</span>
+        <span class="brand__sub">D E S I G N S</span>
+        <p>AstraKAT brings your dream spaces to life through bespoke design, craftsmanship and architecture excellence.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/astrakatdesignslimited?igsh=MXZoa2tueWEwYnN0bQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/people/Astrakat-Designs/61582115757423" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-1 .5-1.5 1.5-1.5H17V2h-2.5C12 2 10.5 3.5 10.5 6v3H8v3.5h2.5V22h3.5v-9.5h2.6l.4-3.5z"/></svg></a>
+          <a href="https://www.linkedin.com/company/astrakat-designs-limited" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C3.343 0 2 1.343 2 3v18c0 1.657 1.343 3 3 3h14c1.657 0 3-1.343 3-3V3c0-1.657-1.343-3-3-3zM8 19H5V9h3v10zm-1.5-11.25C5.122 7.75 4 6.63 4 5.25 4 3.78 5.12 2.75 6.5 2.75 7.89 2.75 9 3.78 9 5.25 9 6.63 7.88 7.75 6.5 7.75zM20 19h-3v-5.5c0-1.31-1.03-2.25-2.25-2.25S12.5 12.19 12.5 13.5V19h-3V9h3v1.14c.46-.86 1.56-1.14 2.25-1.14 2.06 0 3.25 1.34 3.25 3.75V19z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h5>QUICK LINKS</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>SERVICES</h5>
+        <ul>
+          <li><a href="bespoke-furniture.html">Bespoke Furniture</a></li>
+          <li><a href="interior-design.html">Interior Design</a></li>
+          <li><a href="architectural-development.html">Architectural Development</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>AREAS WE COVER</h5>
+        <ul>
+          <li>London</li>
+          <li>Surrey</li>
+          <li>Hertfordshire</li>
+          <li>Berkshire</li>
+          <li>&amp; Surrounding Areas</li>
+        </ul>
+      </div>
+
+      <div class="footer__cta footer__cta--home">
+        <h4>Ready to Transform Your Space?</h4>
+        <p>Send an enquiry to our design experts today.</p>
+        <a href="contact.html#schedule" class="btn btn--gold btn--block">SEND AN ENQUIRY</a>
+        <a href="https://wa.me/447344337970" class="btn btn--gold-outline btn--block" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+          CHAT ON WHATSAPP
+        </a>
+      </div>
     </div>
-    <div class="footer__bar"><div class="container footer__bar-inner"><span>&copy; 2025 AstraKAT Designs. All Rights Reserved.</span><div class="footer__legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div></div></div>
+
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <span>&copy; 2025 AstraKAT Designs Limited. All Rights Reserved.</span>
+        <div class="footer__legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      /* ---- Filter Functionality ---- */
+      var filterButtons = document.querySelectorAll('.pj-filter');
+      var cards = document.querySelectorAll('.pj-card');
+
+      filterButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterButtons.forEach(function (b) {
+            b.classList.remove('is-active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('is-active');
+          btn.setAttribute('aria-selected', 'true');
+
+          var target = btn.getAttribute('data-filter');
+
+          cards.forEach(function (card) {
+            var rawCats = card.getAttribute('data-category') || '';
+            var catList = rawCats.split(/\s+/);
+            if (target === 'all' || catList.indexOf(target) !== -1) {
+              card.classList.remove('is-hidden');
+            } else {
+              card.classList.add('is-hidden');
+            }
+          });
+        });
+      });
+
+      /* ---- Testimonial Carousel ---- */
+      var slides = document.querySelectorAll('.pj-quote-slide');
+      var dots = document.querySelectorAll('.pj-carousel-dot');
+      var prevBtn = document.getElementById('prevQuote');
+      var nextBtn = document.getElementById('nextQuote');
+      var currentIndex = 0;
+
+      function goToSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        currentIndex = index;
+
+        slides.forEach(function (slide, i) {
+          slide.classList.toggle('is-hidden', i !== currentIndex);
+        });
+
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle('is-active', i !== currentIndex);
+        });
+      }
+
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function () {
+          goToSlide(currentIndex - 1);
+        });
+        nextBtn.addEventListener('click', function () {
+          goToSlide(currentIndex + 1);
+        });
+      }
+
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          var targetIndex = parseInt(dot.getAttribute('data-dot'), 10);
+          goToSlide(targetIndex);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
