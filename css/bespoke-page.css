@@ -1,0 +1,49 @@
+.bespoke-page { background: #f7f2e9; }
+.bespoke-hero { position: relative; min-height: 570px; color: #fff; overflow: hidden; }
+.bespoke-hero__bg,.bespoke-hero__overlay,.bespoke-final__bg,.bespoke-final__overlay { position:absolute; inset:0; }
+.bespoke-hero__bg { background:url('../assets/services/Service%20Page/Background%20Image%201.webp') center/cover; }
+.bespoke-hero__overlay { background:linear-gradient(90deg,rgba(15,11,8,.88),rgba(15,11,8,.4) 54%,rgba(15,11,8,.12)); }
+.bespoke-hero__content { position:relative; z-index:1; padding-top:108px; max-width:620px; }
+.bespoke-hero h1 { font:600 clamp(40px,5vw,62px)/1.04 var(--serif); margin:18px 0; }
+.bespoke-hero p:not(.eyebrow) { max-width:430px; color:rgba(255,255,255,.88); font-size:14px; line-height:1.65; }
+.bespoke-hero__actions { display:flex; flex-wrap:wrap; gap:12px; margin:22px 0 15px; }
+.bespoke-hero small { font-size:12px; color:rgba(255,255,255,.8); }
+.bespoke-intro { display:grid; grid-template-columns:1.05fr .95fr; gap:38px; align-items:center; padding-top:18px; padding-bottom:44px; }
+.bespoke-intro__image img { width:100%; aspect-ratio:1.55; object-fit:cover; }
+.bespoke-intro__copy { padding:20px 25px; }
+.bespoke-intro h2,.bespoke-story h2 { font:600 34px/1.08 var(--serif); margin:12px 0 14px; }
+.bespoke-intro__copy p:not(.eyebrow),.bespoke-story p:not(.eyebrow) { color:#544d44; font-size:13px; line-height:1.65; margin:0 0 12px; }
+.bespoke-catalogue,.bespoke-process,.bespoke-benefits { padding-bottom:70px; }
+.bespoke-catalogue .section-title,.bespoke-process .section-title,.bespoke-benefits .section-title { margin-bottom:26px; }
+.bespoke-mock-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.bespoke-mock-grid > a,.bespoke-mock-card { min-width:0; background:#fff; border:1px solid #e3dbcf; }
+.bespoke-mock-grid > a { color:var(--text); padding-bottom:12px; }
+.bespoke-mock-grid img { display:block; width:100%; aspect-ratio:1.5; object-fit:cover; margin-bottom:10px; }
+.bespoke-mock-grid b,.bespoke-mock-grid span { display:block; padding:0 12px; }
+.bespoke-mock-grid b { font:600 15px var(--serif); }
+.bespoke-mock-grid span { margin-top:3px; color:#665e55; font-size:11px; line-height:1.4; }
+.bespoke-mock-card { position:relative; min-height:100%; padding:22px; background:#17110d; color:#fff; }
+.bespoke-mock-card h3 { font:600 24px/1.1 var(--serif); }
+.bespoke-mock-card p { color:#d7cfc2; font-size:12px; margin-top:14px; }
+.bespoke-mock-card a { position:absolute; right:18px; bottom:18px; display:grid; place-items:center; width:34px; height:34px; border:1px solid var(--gold); border-radius:50%; color:var(--gold); font-size:22px; }
+.bespoke-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:26px; border-top:1px solid #c6ab82; }
+.bespoke-steps article { position:relative; text-align:center; padding:25px 12px 0; }
+.bespoke-steps article b { display:grid; place-items:center; width:34px; height:34px; margin:-42px auto 15px; border-radius:50%; background:#b08d57; color:#fff; font-size:12px; }
+.bespoke-steps h3,.benefit-grid h3 { font:600 17px var(--serif); margin-bottom:7px; }
+.bespoke-steps p,.benefit-grid p { color:#665e55; font-size:12px; line-height:1.55; }
+.bespoke-benefits { text-align:center; }
+.benefit-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:18px; }
+.benefit-grid article { padding:0 5px; }
+.benefit-grid b { display:block; color:var(--gold); font-size:28px; margin-bottom:8px; }
+.benefit-grid h3 { font:700 11px var(--sans); }
+.bespoke-story { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:42px; padding-bottom:48px; }
+.bespoke-story img { width:100%; aspect-ratio:1.2; object-fit:cover; }
+.bespoke-final { position:relative; min-height:330px; color:#fff; text-align:center; overflow:hidden; }
+.bespoke-final__bg { background:url('../assets/services/Service%20Page/Bottom%20Image.webp') center/cover; }
+.bespoke-final__overlay { background:rgba(15,11,8,.7); }
+.bespoke-final .container { position:relative; z-index:1; padding-top:70px; }
+.bespoke-final h2 { font:600 35px var(--serif); }
+.bespoke-final p { color:#e0d8ca; font-size:13px; margin-top:8px; }
+.bespoke-final .btn { margin-top:20px; }
+@media (max-width:900px) { .bespoke-intro,.bespoke-story { grid-template-columns:1fr; } .bespoke-mock-grid { grid-template-columns:repeat(2,1fr); } .benefit-grid { grid-template-columns:repeat(3,1fr); } }
+@media (max-width:620px) { .bespoke-hero { min-height:620px; } .bespoke-hero__content { padding-top:80px; } .bespoke-mock-grid { grid-template-columns:1fr; } .bespoke-steps { grid-template-columns:repeat(2,1fr); gap:20px 8px; } .benefit-grid { grid-template-columns:repeat(2,1fr); } .bespoke-intro__copy { padding-inline:0; } }

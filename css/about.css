@@ -16,8 +16,7 @@
 }
 
 /* ---- Hero ---- */
-.hero__bg { background-image: url('../assets/about-hero.webp'); }
-@media (max-width: 768px) { .hero__bg { background-image: url('../assets/about-hero-sm.webp'); } }
+.hero__bg { background-image: url('../assets/about-background.webp'); }
 .hero__lead--sub { margin-top: 14px; color: var(--muted-light); }
 
 .ribbon {
