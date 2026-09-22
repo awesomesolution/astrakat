@@ -1,0 +1,801 @@
+/* ================================================================
+   ARCHITECTURAL DEVELOPMENT PAGE STYLES — AstraKAT Designs
+   Matches the official 'Architectural Development.png' design mockup
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --ad-gold: #be895c;
+  --ad-gold-hover: #a67449;
+  --ad-gold-light: #d4a373;
+  --ad-dark: #22261b;
+  --ad-cream: #f2ebe1;
+  --ad-cream-soft: #f6f0e8;
+  --ad-bg-light: #faf8f5;
+  --ad-text-dark: #1a1a1a;
+  --ad-text-muted: #666666;
+  --ad-border: #e8e4de;
+  --ad-line: #dfd7ce;
+}
+
+/* Base resets & Container */
+.ad-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--ad-text-dark);
+  background-color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.ad-container {
+  width: min(1200px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+/* Buttons */
+.ad-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.ad-btn--gold {
+  background-color: var(--ad-gold);
+  color: #ffffff !important;
+  border-color: var(--ad-gold);
+}
+
+.ad-btn--gold:hover {
+  background-color: var(--ad-gold-hover);
+  border-color: var(--ad-gold-hover);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(190, 137, 92, 0.35);
+}
+
+.ad-btn span {
+  font-size: 14px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.ad-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* ================================================================
+   1. HERO SECTION
+   ================================================================ */
+.ad-hero {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #171c18;
+  color: #ffffff;
+}
+
+.ad-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/services/Architectural%20Development/Background%20Image.webp');
+  background-size: cover;
+  background-position: center right;
+  filter: brightness(0.9);
+}
+
+.ad-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(14, 18, 16, 0.92) 0%, rgba(14, 18, 16, 0.78) 45%, rgba(14, 18, 16, 0.18) 75%, rgba(14, 18, 16, 0.35) 100%);
+}
+
+.ad-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(1200px, 100%);
+  margin: auto;
+  padding: 150px 28px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+}
+
+.ad-hero__main {
+  max-width: 580px;
+}
+
+.ad-hero__kicker {
+  display: inline-block;
+  color: var(--ad-gold-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.ad-hero h1 {
+  margin: 0 0 20px;
+  font: 600 clamp(38px, 5.2vw, 68px)/1.08 'Playfair Display', Georgia, serif;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.ad-hero p.ad-hero__lead {
+  margin: 0 0 28px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+.ad-hero__tags {
+  margin-top: 26px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ad-hero__tags span {
+  color: var(--ad-gold-light);
+  font-weight: 300;
+}
+
+.ad-hero__aside {
+  position: absolute;
+  right: max(28px, calc((100% - 1200px) / 2 + 15px));
+  top: 47%;
+  transform: translateY(-50%);
+  z-index: 3;
+  text-align: left;
+  pointer-events: none;
+}
+
+.ad-hero__aside-text {
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #1c1a17;
+}
+
+.ad-hero__aside-text span {
+  display: block;
+}
+
+.ad-hero__aside-text span.gap {
+  margin-top: 14px;
+}
+
+/* ================================================================
+   2. 4-VALUE FEATURE STRIP
+   ================================================================ */
+.ad-strip {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--ad-border);
+  padding: 42px 0;
+}
+
+.ad-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.ad-strip__item {
+  text-align: center;
+  padding: 10px 24px;
+  border-right: 1px solid var(--ad-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ad-strip__item:last-child {
+  border-right: none;
+}
+
+.ad-strip__icon {
+  width: 38px;
+  height: 38px;
+  color: var(--ad-gold);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-strip__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ad-strip__item h3 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ad-text-dark);
+  margin: 0 0 8px;
+}
+
+.ad-strip__item p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ad-text-muted);
+  margin: 0;
+  max-width: 210px;
+}
+
+/* ================================================================
+   3. ARCHITECTURE WITH PURPOSE (SPLIT SECTION)
+   ================================================================ */
+.ad-purpose {
+  background-color: #ffffff;
+  padding: 68px 0 44px;
+}
+
+.ad-purpose__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.8fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.ad-purpose__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ad-eyebrow {
+  display: inline-block;
+  color: var(--ad-gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.ad-purpose__left h2 {
+  font: 600 clamp(32px, 3.4vw, 44px)/1.15 'Playfair Display', Georgia, serif;
+  color: var(--ad-text-dark);
+  margin: 0 0 20px;
+  letter-spacing: -0.3px;
+}
+
+.ad-purpose__left p {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #555555;
+  margin: 0 0 28px;
+}
+
+.ad-purpose__left .ad-btn {
+  align-self: flex-start;
+}
+
+.ad-purpose__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.ad-purpose__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ad-purpose__media:hover img {
+  transform: scale(1.02);
+}
+
+/* ================================================================
+   4. 3-CARD PORTFOLIO FEATURE GRID (EXTENSIONS, NEW BUILDS, LOFTS)
+   ================================================================ */
+.ad-services {
+  background-color: #ffffff;
+  padding: 24px 0 64px;
+}
+
+.ad-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.ad-card {
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #f0ede8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.ad-card__media {
+  position: relative;
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  background-color: #f5f2ed;
+}
+
+.ad-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ad-card:hover .ad-card__media img {
+  transform: scale(1.05);
+}
+
+.ad-card__body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ad-card__body h3 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--ad-text-dark);
+  margin: 0 0 6px;
+}
+
+.ad-card__body p {
+  font-size: 13.5px;
+  color: var(--ad-text-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ================================================================
+   5. 5-STEP PROCESS TIMELINE
+   ================================================================ */
+.ad-process {
+  background-color: var(--ad-bg-light);
+  border-top: 1px solid var(--ad-border);
+  border-bottom: 1px solid var(--ad-border);
+  padding: 68px 0 72px;
+}
+
+.ad-process__eyebrow {
+  display: block;
+  text-align: center;
+  color: var(--ad-gold);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.ad-process__timeline {
+  position: relative;
+}
+
+.ad-process__line {
+  position: absolute;
+  top: 17px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background-color: var(--ad-line);
+  z-index: 1;
+}
+
+.ad-process__grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.ad-process__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ad-process__badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--ad-gold);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 0 6px var(--ad-bg-light);
+  transition: transform 0.3s ease;
+}
+
+.ad-process__step:hover .ad-process__badge {
+  transform: scale(1.1);
+}
+
+.ad-process__step h4 {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ad-text-dark);
+  margin: 0 0 8px;
+  line-height: 1.35;
+  min-height: 2.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-process__step p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ad-text-muted);
+  margin: 0;
+  max-width: 170px;
+}
+
+/* ================================================================
+   6. 3-COLUMN FEATURE SPLIT (DARK CARD + MODEL + TESTIMONIAL)
+   ================================================================ */
+.ad-triple {
+  background-color: #ffffff;
+  padding: 68px 0;
+}
+
+.ad-triple__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Left Dark Card */
+.ad-triple__dark {
+  background-color: var(--ad-dark);
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 42px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ad-triple__kicker {
+  display: inline-block;
+  color: var(--ad-gold-light);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.ad-triple__dark h3 {
+  font: 600 clamp(26px, 2.7vw, 36px)/1.15 'Playfair Display', Georgia, serif;
+  color: #ffffff;
+  margin: 0 0 18px;
+  letter-spacing: -0.3px;
+}
+
+.ad-triple__dark p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 28px;
+}
+
+.ad-triple__dark .ad-btn {
+  align-self: flex-start;
+  font-size: 10.5px;
+  padding: 12px 20px;
+}
+
+/* Center Image (Architectural Model) */
+.ad-triple__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  min-height: 360px;
+}
+
+.ad-triple__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ad-triple__media:hover img {
+  transform: scale(1.03);
+}
+
+/* Right Testimonial Card */
+.ad-triple__quote {
+  background-color: var(--ad-cream-soft);
+  border-radius: 4px;
+  padding: 44px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.ad-quote-mark {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--ad-gold);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.ad-triple__quote blockquote {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #262626;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.ad-triple__quote cite {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+/* ================================================================
+   7. BOTTOM CTA BANNER
+   ================================================================ */
+.ad-cta {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #121411;
+  color: #ffffff;
+}
+
+.ad-cta__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/services/Architectural%20Development/Last%20Image.webp');
+  background-size: cover;
+  background-position: center 65%;
+  filter: brightness(0.85);
+}
+
+.ad-cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(14, 18, 16, 0.88) 0%, rgba(14, 18, 16, 0.72) 50%, rgba(14, 18, 16, 0.82) 100%);
+}
+
+.ad-cta__inner {
+  position: relative;
+  z-index: 2;
+  width: min(1200px, 100%);
+  margin: auto;
+  padding: 80px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.ad-cta__main {
+  max-width: 580px;
+}
+
+.ad-cta h2 {
+  font: 600 clamp(32px, 4vw, 50px)/1.15 'Playfair Display', Georgia, serif;
+  color: #ffffff;
+  margin: 0 0 16px;
+  letter-spacing: -0.4px;
+}
+
+.ad-cta p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 28px;
+  max-width: 480px;
+}
+
+.ad-cta__tags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  text-align: right;
+}
+
+.ad-cta__tags span {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ad-cta__highlight {
+  border-bottom: 1.5px solid var(--ad-gold);
+  padding-bottom: 5px;
+}
+
+/* ================================================================
+   8. RESPONSIVE DESIGN
+   ================================================================ */
+@media (max-width: 1024px) {
+  .ad-strip__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .ad-strip__item {
+    border-right: none;
+    border-bottom: 1px solid var(--ad-border);
+    padding-bottom: 24px;
+  }
+
+  .ad-strip__item:nth-child(3),
+  .ad-strip__item:nth-child(4) {
+    border-bottom: none;
+    padding-bottom: 10px;
+  }
+
+  .ad-purpose__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ad-services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ad-process__line {
+    display: none;
+  }
+
+  .ad-process__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 16px;
+  }
+
+  .ad-triple__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-triple__dark,
+  .ad-triple__quote {
+    padding: 36px 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ad-hero {
+    min-height: 560px;
+  }
+
+  .ad-hero__content {
+    padding: 130px 20px 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .ad-hero__aside {
+    display: none;
+  }
+
+  .ad-strip__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ad-strip__item {
+    border-bottom: 1px solid var(--ad-border);
+    padding-bottom: 20px;
+  }
+
+  .ad-strip__item:last-child {
+    border-bottom: none;
+  }
+
+  .ad-services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-process__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: left;
+  }
+
+  .ad-process__step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .ad-process__badge {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .ad-process__step h4 {
+    min-height: auto;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .ad-process__step p {
+    max-width: 100%;
+  }
+
+  .ad-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 20px;
+  }
+
+  .ad-cta__tags {
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 16px;
+  }
+}

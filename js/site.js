@@ -40,6 +40,23 @@
     });
   }
 
+  /* ---- Highlight Projects if navigated from Projects page ---- */
+  try {
+    var searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get("from") === "projects") {
+      var navAnchors = document.querySelectorAll("#navLinks a");
+      navAnchors.forEach(function (a) {
+        if (a.getAttribute("href") === "projects.html") {
+          a.classList.add("active");
+          a.setAttribute("aria-current", "page");
+        } else {
+          a.classList.remove("active");
+          a.removeAttribute("aria-current");
+        }
+      });
+    }
+  } catch (err) {}
+
   /* ---- Back-to-top button (injected) ---- */
   var toTop = document.createElement("button");
   toTop.className = "to-top";
