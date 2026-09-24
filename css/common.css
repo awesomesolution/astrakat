@@ -517,7 +517,11 @@
     color: var(--text);
   }
   .prose h2 { font-family: var(--serif); font-size: 22px; font-weight: 600; margin: 34px 0 10px; }
-  .prose p { margin-bottom: 14px; font-size: 15px; color: var(--muted); }
+  .prose h3 { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--text); margin: 22px 0 6px; }
+  .prose p { margin-bottom: 14px; font-size: 15px; color: var(--muted); line-height: 1.7; }
+  .prose ul { margin: 0 0 18px 20px; padding: 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
+  .prose li { margin-bottom: 8px; }
+  .prose li strong { color: var(--text); }
   .prose a { color: var(--gold); }
 
   .footer__grid--legal { grid-template-columns: 1.8fr 1fr 1.3fr; }
