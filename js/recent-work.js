@@ -98,20 +98,150 @@
     }).join('');
   };
 
+  const resolveCategory = input => {
+    if (!input) return null;
+    const clean = input.toLowerCase().trim().replace(/^#/, '').replace(/[^a-z0-9]/g, '');
+    if (!clean) return null;
+    if (clean === 'all') return 'All';
+
+    // Direct match against category keys
+    for (const cat of Object.keys(categories)) {
+      if (cat.toLowerCase().replace(/[^a-z0-9]/g, '') === clean) {
+        return cat;
+      }
+    }
+
+    // Direct match against folder names
+    for (const [cat, data] of Object.entries(categories)) {
+      if (data.folder.toLowerCase().replace(/[^a-z0-9]/g, '') === clean) {
+        return cat;
+      }
+    }
+
+    // Project section aliases & common variants
+    const aliasMap = {
+      kitchens: 'Kitchens',
+      kitchen: 'Kitchens',
+      fittedwardrobes: 'Fitted Wardrobes',
+      fittedwardrobe: 'Fitted Wardrobes',
+      wardrobes: 'Fitted Wardrobes',
+      wardrobe: 'Fitted Wardrobes',
+      mediawalls: 'Media Walls',
+      mediawall: 'Media Walls',
+      livingspaces: 'Media Walls',
+      livingspace: 'Media Walls',
+      living: 'Media Walls',
+      walkinwardrobes: 'Walk-in Wardrobes',
+      walkinwardrobe: 'Walk-in Wardrobes',
+      walkin: 'Walk-in Wardrobes',
+      bedrooms: 'Walk-in Wardrobes',
+      bedroom: 'Walk-in Wardrobes',
+      studytables: 'Study Tables',
+      studytable: 'Study Tables',
+      homeoffices: 'Study Tables',
+      homeoffice: 'Study Tables',
+      study: 'Study Tables',
+      bars: 'Bars',
+      bar: 'Bars',
+      barsentertainment: 'Bars',
+      dressingunits: 'Dressing Units',
+      dressingunit: 'Dressing Units',
+      dressing: 'Dressing Units',
+      slidingwardrobes: 'Sliding Wardrobes',
+      slidingwardrobe: 'Sliding Wardrobes',
+      sliding: 'Sliding Wardrobes',
+      utilityrooms: 'Utility Rooms',
+      utilityroom: 'Utility Rooms',
+      utility: 'Utility Rooms',
+      bathrooms: 'Utility Rooms',
+      bathroom: 'Utility Rooms',
+      understairsstorage: 'Understairs Storage',
+      understairs: 'Understairs Storage',
+      hallways: 'Understairs Storage',
+      hallway: 'Understairs Storage',
+      hallwaysentrances: 'Understairs Storage',
+      entrance: 'Understairs Storage',
+      entrances: 'Understairs Storage',
+      completehomes: 'All',
+      fullhome: 'All'
+    };
+
+    return aliasMap[clean] || null;
+  };
+
+  const selectCategory = (targetCat, updateUrl = false) => {
+    const validCat = (targetCat && categories[targetCat]) ? targetCat : 'All';
+
+    if (filters) {
+      const buttons = filters.querySelectorAll('.rw-filter');
+      buttons.forEach(btn => {
+        const isActive = btn.textContent.trim().toLowerCase() === validCat.toLowerCase();
+        btn.classList.toggle('is-active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    }
+
+    render(validCat);
+
+    if (updateUrl && window.history && window.history.replaceState) {
+      const url = new URL(window.location);
+      if (validCat === 'All') {
+        url.searchParams.delete('category');
+      } else {
+        const slug = categories[validCat] ? categories[validCat].folder : validCat.toLowerCase().replace(/\s+/g, '-');
+        url.searchParams.set('category', slug);
+      }
+      window.history.replaceState(null, '', url.toString());
+    }
+  };
+
+  const getInitialCategory = () => {
+    const params = new URLSearchParams(window.location.search);
+    const paramCat = params.get('category') || params.get('tab');
+    if (paramCat) {
+      const resolved = resolveCategory(paramCat);
+      if (resolved) return resolved;
+    }
+
+    const hash = window.location.hash ? window.location.hash.replace(/^#/, '') : '';
+    if (hash && hash !== 'videos') {
+      const resolved = resolveCategory(hash);
+      if (resolved) return resolved;
+    }
+
+    return 'All';
+  };
+
   if (filters) {
     filters.innerHTML = ['All', ...Object.keys(categories)]
-      .map(name => `<button class="rw-filter${name === 'All' ? ' is-active' : ''}" type="button">${name}</button>`)
+      .map(name => `<button class="rw-filter" type="button" aria-pressed="false">${name}</button>`)
       .join('');
 
     filters.addEventListener('click', e => {
       const button = e.target.closest('button');
       if (!button) return;
-      document.querySelectorAll('.rw-filter').forEach(item => {
-        item.classList.toggle('is-active', item === button);
-      });
-      render(button.textContent.trim());
+      selectCategory(button.textContent.trim(), true);
     });
   }
 
-  render('All');
+  const initialCat = getInitialCategory();
+  selectCategory(initialCat);
+
+  // Auto-scroll to videos section if category param or #videos anchor was supplied
+  const urlParams = new URLSearchParams(window.location.search);
+  const hasCategoryParam = Boolean(urlParams.get('category') || urlParams.get('tab'));
+  const hasVideosHash = window.location.hash === '#videos';
+
+  if (hasCategoryParam || hasVideosHash) {
+    setTimeout(() => {
+      const videosSection = document.getElementById('videos');
+      if (videosSection) {
+        videosSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 150);
+  }
+
+  window.addEventListener('popstate', () => {
+    selectCategory(getInitialCategory(), false);
+  });
 })();

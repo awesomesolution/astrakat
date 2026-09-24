@@ -48,6 +48,7 @@
 
 .rw-videos {
   padding: 84px 28px 100px;
+  scroll-margin-top: 90px;
 }
 
 .rw-intro {
