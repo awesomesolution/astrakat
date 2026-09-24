@@ -206,6 +206,17 @@
 .consent.field--error .field__error { flex-basis: 100%; margin-top: 4px; }
 .consent.field--error > span { color: #c0392b; }
 
+.form__alert {
+  display: none;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border-radius: 4px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  transition: all .25s ease;
+}
+
 .form__success { text-align: center; padding: 54px 20px; }
 .form__success svg { width: 56px; height: 56px; margin: 0 auto 18px; color: var(--gold); }
 .form__success h3 { font-family: var(--serif); font-size: 26px; font-weight: 600; margin-bottom: 10px; }

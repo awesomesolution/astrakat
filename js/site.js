@@ -128,8 +128,8 @@
     });
   }
 
-  /* ---- Contact form: validation + success state ---- */
-  var form = document.querySelector(".form");
+  /* ---- Contact form: validation + success state (fallback for static demo forms) ---- */
+  var form = document.querySelector(".form:not(#contact-form)");
   if (form) {
     var wrapOf = function (field) { return field.closest(".field, .consent"); };
     var showError = function (field, msg) {

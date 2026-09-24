@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preload" as="image" href="assets/home/home-background.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/services/Service Page/Background Image.webp" fetchpriority="high" />
   <title>Services — AstraKAT Designs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <meta name="description" content="AstraKAT Designs services — bespoke furniture, interior design and architectural development, from concept and planning through to delivery and installation." />
+  <meta name="description" content="AstraKAT Designs services — bespoke furniture, interior design and architectural development, tailored to the way you live." />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://www.astrakatdesigns.com/services.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="AstraKAT Designs" />
   <meta property="og:title" content="Services — AstraKAT Designs" />
-  <meta property="og:description" content="AstraKAT Designs services — bespoke furniture, interior design and architectural development, from concept and planning through to delivery and installation." />
+  <meta property="og:description" content="AstraKAT Designs services — bespoke furniture, interior design and architectural development, tailored to the way you live." />
   <meta property="og:url" content="https://www.astrakatdesigns.com/services.html" />
-  <meta property="og:image" content="https://www.astrakatdesigns.com/assets/hero-bg.webp" />
+  <meta property="og:image" content="https://www.astrakatdesigns.com/assets/services/Service%20Page/Background%20Image.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/services.css" />
   <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/services.css" />
   <script src="js/site.js" defer></script>
 </head>
-<body>
+<body class="services-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Header -->
   <header class="site-header" id="siteHeader">
     <nav class="nav container">
       <a href="index.html" class="brand">
@@ -52,192 +53,253 @@
     </nav>
   </header>
 
-  <!-- ===================== HERO + HEADER ===================== -->
-  <section class="shero" id="hero">
-    <div class="shero__bg"></div>
-    <div class="shero__overlay"></div>
-
-    <!-- Nav -->
-
-    <!-- Hero content -->
-    <div class="shero__content container">
-      <p class="eyebrow">OUR SERVICES</p>
-      <h1 class="shero__title">
-        Design-Led.<br />
-        Detail-Driven.<br />
-        Built to Last.
-      </h1>
-      <p class="shero__lead">
-        We provide end-to-end design and development
-        services tailored to your lifestyle, space and vision.
-        From bespoke creations to architectural excellence,
-        we craft timeless environments that inspire.
-      </p>
-    </div>
-
-    <!-- Feature strip -->
-    <div class="container">
-      <div class="features">
-        <div class="feature">
-          <span class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l9 6-9 6-9-6 9-6z"/><path d="M3 9l9 12 9-12"/></svg>
-          </span>
-          <div>
-            <h4>BESPOKE &amp; CUSTOM</h4>
-            <p>Every detail is uniquely crafted for you.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <span class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="9" r="5"/><path d="M8.5 13l-1.6 8 5.1-3 5.1 3-1.6-8"/></svg>
-          </span>
-          <div>
-            <h4>PREMIUM QUALITY</h4>
-            <p>Exceptional materials and finishes, built to last.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <span class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 19a6 6 0 0 1 12 0M14.5 19a5 5 0 0 1 6.5-4"/></svg>
-          </span>
-          <div>
-            <h4>END-TO-END SERVICE</h4>
-            <p>From concept to completion, we've got you covered.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <span class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg>
-          </span>
-          <div>
-            <h4>TRUST &amp; RELIABILITY</h4>
-            <p>Transparent communication and dedicated support.</p>
-          </div>
-        </div>
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="sv-hero" id="hero">
+    <div class="sv-hero__bg"></div>
+    <div class="sv-hero__overlay"></div>
+    <div class="container sv-hero__container">
+      <div class="sv-hero__content">
+        <p class="sv-hero__eyebrow">OUR SERVICES <span>&rarr;</span></p>
+        <h1 class="sv-hero__title">
+          Design.<br />
+          Build.<br />
+          Transform.
+        </h1>
+        <p class="sv-hero__lead">
+          Beautifully designed spaces, tailored to the way you live. From bespoke furniture to considered interiors and architectural development &mdash; all under one roof.
+        </p>
+        <a href="#services" class="sv-hero__btn">EXPLORE OUR SERVICES <span>&rarr;</span></a>
       </div>
     </div>
   </section>
 
   <main id="main">
 
-  <!-- ===================== CORE SERVICES ===================== -->
-  <section class="core container" id="services">
-    <p class="eyebrow eyebrow--center">WHAT WE DO</p>
-    <h2 class="section-title">Our Core Services</h2>
+  <!-- ===================== SERVICES SHOWCASE ===================== -->
+  <section class="sv-showcase container" id="services">
 
-    <div class="core__grid">
-      <article class="core-card">
-        <div class="core-card__media">
-          <div class="core-card__img" style="background-image:url('assets/home/bespoke-furniture.webp')"></div>
-          <span class="core-card__badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><path d="M4 11h16a1 1 0 0 1 1 1v4H3v-4a1 1 0 0 1 1-1Z"/><path d="M5 16v3M19 16v3"/></svg>
-          </span>
+    <!-- 01. Bespoke Furniture -->
+    <article class="sv-row" id="bespoke-furniture">
+      <div class="sv-row__media">
+        <img src="assets/services/Service Page/Bespoke Furniture.webp" alt="Bespoke luxury wardrobe and vanity unit" loading="lazy" />
+      </div>
+      <div class="sv-row__content">
+        <div class="sv-num-badge">
+          <span class="sv-num-badge__text">01</span>
+          <span class="sv-num-badge__line"></span>
         </div>
-        <div class="core-card__body">
-          <h3>Bespoke Furniture</h3>
-          <p>Custom-made furniture and joinery designed for your space perfectly. From wardrobes and TV units to home offices and storage solutions – crafted with precision, functionality and elegance.</p>
-          <a href="bespoke-furniture.html" class="link-btn">EXPLORE MORE <span>&rarr;</span></a>
-        </div>
-      </article>
+        <h2 class="sv-row__title">Bespoke Furniture</h2>
+        <h3 class="sv-row__subtitle">Designed for Your Space. Made for Your Home.</h3>
+        <p class="sv-row__text">
+          Bespoke furniture gives you the freedom to create something that fits your home precisely, rather than adapting your space around standard-sized furniture. Every design is developed around the dimensions, layout and character of your room, allowing us to make better use of the available space while maintaining a clean, considered finish.
+        </p>
+        <p class="sv-row__text">
+          From the proportions and internal layout to the colours, materials, handles and lighting, each detail can be tailored to suit your preferences. Our designers carefully balance storage, functionality and aesthetics so the finished piece feels like a natural part of the room.
+        </p>
+        <p class="sv-row__text">
+          With detailed 3D visuals before manufacturing, you can see how your design will look and make informed choices before it is brought to life by our manufacturing and installation teams.
+        </p>
+        <a href="bespoke-furniture.html" class="sv-btn-outline">VIEW BESPOKE FURNITURE <span>&rarr;</span></a>
+      </div>
+    </article>
 
-      <article class="core-card">
-        <div class="core-card__media">
-          <div class="core-card__img" style="background-image:url('assets/home/interior-design.webp')"></div>
-          <span class="core-card__badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 3h4l2 7H8l2-7z"/><path d="M12 10v7"/><path d="M8 21h8"/><path d="M10 17h4l1 4H9l1-4z"/></svg>
-          </span>
+    <!-- 02. Interior Design -->
+    <article class="sv-row sv-row--reverse" id="interior-design">
+      <div class="sv-row__media">
+        <img src="assets/services/Service Page/Interior Design.webp" alt="Complete Interior Design luxury bedroom suite" loading="lazy" />
+      </div>
+      <div class="sv-row__content">
+        <div class="sv-num-badge">
+          <span class="sv-num-badge__text">02</span>
+          <span class="sv-num-badge__line"></span>
         </div>
-        <div class="core-card__body">
-          <h3>Interior Design</h3>
-          <p>Complete interior design services that transform your home or commercial space into a refined, functional and beautifully curated environment tailored to the way you live and work.</p>
-          <a href="interior-design.html" class="link-btn">EXPLORE MORE <span>&rarr;</span></a>
-        </div>
-      </article>
+        <h2 class="sv-row__title">Interior Design</h2>
+        <h3 class="sv-row__subtitle">Complete Spaces. Thoughtfully Designed.</h3>
+        <p class="sv-row__text">
+          We create harmonious interiors that balance aesthetics and functionality. From living and dining spaces to bedrooms, bathrooms and home offices, our designers bring your vision to life with careful material selection, colour coordination and attention to detail.
+        </p>
+        <ul class="sv-checklist">
+          <li>
+            <span class="sv-checklist__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Space planning &amp; layout</span>
+          </li>
+          <li>
+            <span class="sv-checklist__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Colour and material selection</span>
+          </li>
+          <li>
+            <span class="sv-checklist__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Lighting design</span>
+          </li>
+          <li>
+            <span class="sv-checklist__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Furniture, fixtures &amp; d&eacute;cor styling</span>
+          </li>
+        </ul>
+        <a href="interior-design.html" class="sv-btn-outline">VIEW INTERIOR DESIGN <span>&rarr;</span></a>
+      </div>
+    </article>
 
-      <article class="core-card">
-        <div class="core-card__media">
-          <div class="core-card__img" style="background-image:url('assets/home/architectural-development.webp')"></div>
-          <span class="core-card__badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 21V8l5-3v3l5-3v4l6-3v12"/><path d="M3 21h18"/><path d="M7 11v0M7 14v0M7 17v0M12 12v0M12 15v0M12 18v0M17 12v0M17 15v0M17 18v0"/></svg>
-          </span>
+    <!-- 03. Architectural Development -->
+    <article class="sv-row" id="architectural-development">
+      <div class="sv-row__media">
+        <img src="assets/services/Service Page/Architectural Development.webp" alt="Architectural Development modern villa design" loading="lazy" />
+      </div>
+      <div class="sv-row__content">
+        <div class="sv-num-badge">
+          <span class="sv-num-badge__text">03</span>
+          <span class="sv-num-badge__line"></span>
         </div>
-        <div class="core-card__body">
-          <h3>Architectural Development</h3>
-          <p>From concept and planning to detailed design and approvals, we create architectural solutions that are practical, inspiring and buildable – delivering spaces that stand the test of time.</p>
-          <a href="architectural-development.html" class="link-btn">EXPLORE MORE <span>&rarr;</span></a>
-        </div>
-      </article>
-    </div>
+        <h2 class="sv-row__title">Architectural Development</h2>
+        <h3 class="sv-row__subtitle">From Concept to Completion.</h3>
+        <p class="sv-row__text">
+          We provide end-to-end architectural services, from initial ideas and feasibility studies to detailed drawings, planning applications and project coordination. Our team works closely with you to create spaces that are beautiful, practical and built to last.
+        </p>
+        <ul class="sv-checklist">
+          <li>
+            <span class="sv-checklist__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Concept design &amp; feasibility</span>
+          </li>
+          <li>
+            <span class="sv-checklist__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Planning and technical drawings</span>
+          </li>
+          <li>
+            <span class="sv-checklist__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Extensions and renovations</span>
+          </li>
+          <li>
+            <span class="sv-checklist__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Project coordination</span>
+          </li>
+        </ul>
+        <a href="architectural-development.html" class="sv-btn-outline">VIEW ARCHITECTURAL DEVELOPMENT <span>&rarr;</span></a>
+      </div>
+    </article>
   </section>
 
-  <!-- ===================== PROCESS ===================== -->
-  <section class="process" id="process">
-    <div class="process__texture"></div>
+  <!-- ===================== WHY CHOOSE ASTRAKAT ===================== -->
+  <section class="sv-why">
     <div class="container">
-      <p class="eyebrow eyebrow--center">OUR PROCESS</p>
-      <h2 class="section-title section-title--light">A Seamless Journey From Concept to Completion</h2>
+      <div class="sv-section-header">
+        <p class="sv-section-eyebrow"><span></span>WHY CHOOSE ASTRAKAT DESIGNS<span></span></p>
+        <h2 class="sv-section-title">More Than Design. A Complete Service.</h2>
+      </div>
 
-      <div class="process__grid">
-        <div class="step">
-          <div class="step__head">
-            <span class="step__circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.3 8.5 8.5 0 0 1-3.8-.9L3 20l1.1-5.2A8.38 8.38 0 0 1 3 11.5a8.5 8.5 0 0 1 9-8.3 8.38 8.38 0 0 1 9 8.3z"/></svg>
-            </span>
-            <span class="step__num">01</span>
-            <span class="step__line"></span>
+      <div class="sv-why__grid">
+        <div class="sv-why__item">
+          <div class="sv-why__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M10 3l-2 6 4 12 4-12-2-6"/></svg>
           </div>
-          <h4>CONSULTATION</h4>
-          <p>We listen to your ideas, needs and lifestyle.</p>
+          <h4 class="sv-why__title">Bespoke Solutions</h4>
+          <p class="sv-why__text">Tailored to your space and lifestyle.</p>
         </div>
-        <div class="step">
-          <div class="step__head">
-            <span class="step__circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 4l6 6L9 21H3v-6z"/><path d="M13 5l6 6"/></svg>
-            </span>
-            <span class="step__num">02</span>
-            <span class="step__line"></span>
+
+        <div class="sv-why__item">
+          <div class="sv-why__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z"/><path d="M9 21V12h6v9"/></svg>
           </div>
-          <h4>DESIGN &amp; PLANNING</h4>
-          <p>We create concepts, visuals and detailed plans.</p>
+          <h4 class="sv-why__title">Design Expertise</h4>
+          <p class="sv-why__text">From concept to completion.</p>
         </div>
-        <div class="step">
-          <div class="step__head">
-            <span class="step__circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 21V9l5-3v3l5-3v3l6-3v15"/><path d="M3 21h18"/></svg>
-            </span>
-            <span class="step__num">03</span>
-            <span class="step__line"></span>
+
+        <div class="sv-why__item">
+          <div class="sv-why__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h4>DEVELOPMENT</h4>
-          <p>We handle approvals, technical drawings and coordination.</p>
+          <h4 class="sv-why__title">Experienced Team</h4>
+          <p class="sv-why__text">A passionate team of designers and specialists.</p>
         </div>
-        <div class="step">
-          <div class="step__head">
-            <span class="step__circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 5l6 6m-6 3l5-5M14 5l5 5m-9 9l9-9"/><path d="M3 7l3-2 2 3M21 7l-3-2-2 3"/></svg>
-            </span>
-            <span class="step__num">04</span>
+
+        <div class="sv-why__item">
+          <div class="sv-why__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
           </div>
-          <h4>DELIVERY &amp; INSTALLATION</h4>
-          <p>Expert craftsmanship and installation with attention to every detail.</p>
+          <h4 class="sv-why__title">Quality Materials</h4>
+          <p class="sv-why__text">Premium finishes built to last.</p>
+        </div>
+
+        <div class="sv-why__item">
+          <div class="sv-why__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <h4 class="sv-why__title">Client-Focused</h4>
+          <p class="sv-why__text">A seamless, stress-free experience.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CTA BAND ===================== -->
-  <section class="cta" id="contact">
-    <div class="cta__img"></div>
-    <div class="cta__overlay"></div>
-    <div class="container cta__inner">
-      <h2 class="cta__title">Ready to Bring Your Vision to Life?</h2>
-      <p class="cta__lead">Tell us about your project and our design experts will help you shape the right solution.</p>
-      <div class="cta__actions">
-        <a href="contact.html#schedule" class="btn btn--gold">SEND AN ENQUIRY <span>&rarr;</span></a>
-        <a href="https://wa.me/447344337970" class="btn btn--ghost" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
-          CHAT ON WHATSAPP
-        </a>
+  <!-- ===================== OUR PROCESS ===================== -->
+  <section class="sv-process">
+    <div class="container">
+      <div class="sv-section-header">
+        <p class="sv-section-eyebrow"><span></span>OUR PROCESS<span></span></p>
+        <h2 class="sv-section-title">From Your Vision to a Beautiful Reality.</h2>
+      </div>
+
+      <div class="sv-process__timeline">
+        <div class="sv-process__track"></div>
+        <div class="sv-process__grid">
+          <div class="sv-step">
+            <div class="sv-step__circle">01</div>
+            <h4 class="sv-step__title">Consultation</h4>
+            <p class="sv-step__text">We take time to understand your needs, style and space.</p>
+          </div>
+
+          <div class="sv-step">
+            <div class="sv-step__circle">02</div>
+            <h4 class="sv-step__title">Design</h4>
+            <p class="sv-step__text">Our team creates tailored concepts and 3D visuals.</p>
+          </div>
+
+          <div class="sv-step">
+            <div class="sv-step__circle">03</div>
+            <h4 class="sv-step__title">Plan &amp; Approve</h4>
+            <p class="sv-step__text">We refine the details and finalise the design.</p>
+          </div>
+
+          <div class="sv-step">
+            <div class="sv-step__circle">04</div>
+            <h4 class="sv-step__title">Build &amp; Install</h4>
+            <p class="sv-step__text">Expert craftsmanship and professional installation.</p>
+          </div>
+
+          <div class="sv-step">
+            <div class="sv-step__circle">05</div>
+            <h4 class="sv-step__title">Enjoy Your Space</h4>
+            <p class="sv-step__text">A beautifully designed space, made for you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BOTTOM CTA BANNER ===================== -->
+  <section class="sv-cta">
+    <div class="sv-cta__bg"></div>
+    <div class="sv-cta__overlay"></div>
+    <div class="container sv-cta__container">
+      <div class="sv-cta__content">
+        <h2 class="sv-cta__title">Let's Create Something Exceptional</h2>
+        <p class="sv-cta__lead">Get in touch today to discuss your project and book a free consultation.</p>
+        <a href="contact.html#schedule" class="sv-cta__btn">SEND AN ENQUIRY <span>&rarr;</span></a>
       </div>
     </div>
   </section>
@@ -245,58 +307,64 @@
   </main>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container footer__grid footer__grid--services">
+  <footer class="footer" id="contact">
+    <div class="container footer__grid footer__grid--home">
       <div class="footer__brand">
         <span class="brand__name">AstraKAT</span>
         <span class="brand__sub">D E S I G N S</span>
-        <p>Creating refined living spaces through bespoke design, craftsmanship and architectural excellence.</p>
+        <p>AstraKAT brings your dream spaces to life through bespoke design, craftsmanship and architecture excellence.</p>
         <div class="footer__social">
           <a href="https://www.instagram.com/astrakatdesignslimited?igsh=MXZoa2tueWEwYnN0bQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
           <a href="https://www.facebook.com/people/Astrakat-Designs/61582115757423" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-1 .5-1.5 1.5-1.5H17V2h-2.5C12 2 10.5 3.5 10.5 6v3H8v3.5h2.5V22h3.5v-9.5h2.6l.4-3.5z"/></svg></a>
-          <a href="https://www.linkedin.com/company/astrakat-designs-limited" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.667-.668-1.879-.668-2.536-.009l-.999-.999c-.668-.667-.668-1.879-.009-2.536l-.999-.999c-.668-.667-1.879-.667-2.536 .009l-.999 .999c-.668 .667-.668 1 .009 3l .999 .998c .33 .33 .78 .488" /></svg></a>
+          <a href="https://www.linkedin.com/company/astrakat-designs-limited" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C3.343 0 2 1.343 2 3v18c0 1.657 1.343 3 3 3h14c1.657 0 3-1.343 3-3V3c0-1.657-1.343-3-3-3zM8 19H5V9h3v10zm-1.5-11.25C5.122 7.75 4 6.63 4 5.25 4 3.78 5.12 2.75 6.5 2.75 7.89 2.75 9 3.78 9 5.25 9 6.63 7.88 7.75 6.5 7.75zM20 19h-3v-5.5c0-1.31-1.03-2.25-2.25-2.25S12.5 12.19 12.5 13.5V19h-3V9h3v1.14c.46-.86 1.56-1.14 2.25-1.14 2.06 0 3.25 1.34 3.25 3.75V19z"/></svg></a>
         </div>
       </div>
 
       <div class="footer__col">
-        <h5>NAVIGATION</h5>
+        <h5>QUICK LINKS</h5>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
 
-      <div class="footer__col footer__contact">
-        <h5>CONTACT</h5>
+      <div class="footer__col">
+        <h5>SERVICES</h5>
         <ul>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-            <span>London, United Kingdom</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            <span>info@astrakatdesigns.com</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-            <span>07344 337 970</span>
-          </li>
+          <li><a href="bespoke-furniture.html">Bespoke Furniture</a></li>
+          <li><a href="interior-design.html">Interior Design</a></li>
+          <li><a href="architectural-development.html">Architectural Development</a></li>
         </ul>
       </div>
 
-      <div class="footer__cta">
-        <h4>SEND AN ENQUIRY</h4>
-        <p>Let's create something extraordinary together.</p>
+      <div class="footer__col">
+        <h5>AREAS WE COVER</h5>
+        <ul>
+          <li>London</li>
+          <li>Surrey</li>
+          <li>Hertfordshire</li>
+          <li>Berkshire</li>
+          <li>&amp; Surrounding Areas</li>
+        </ul>
+      </div>
+
+      <div class="footer__cta footer__cta--home">
+        <h4>Ready to Transform Your Space?</h4>
+        <p>Send an enquiry to our design experts today.</p>
+        <a href="contact.html#schedule" class="btn btn--gold btn--block">SEND AN ENQUIRY</a>
+        <a href="https://wa.me/447344337970" class="btn btn--gold-outline btn--block" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+          CHAT ON WHATSAPP
+        </a>
       </div>
     </div>
 
     <div class="footer__bar">
       <div class="container footer__bar-inner">
-        <span>&copy; 2025 AstraKAT Designs. All Rights Reserved.</span>
+        <span>&copy; 2025 AstraKAT Designs Limited. All Rights Reserved.</span>
         <div class="footer__legal">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms &amp; Conditions</a>
