@@ -131,6 +131,11 @@
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   user-select: none;
 }
+.projects-recent-link { background:#171b20; color:#fff; padding:58px 28px; }
+.projects-recent-link__inner { width:min(1120px,100%); margin:auto; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+.projects-recent-link h2 { margin:8px 0; font:600 clamp(28px,3.5vw,44px)/1.1 'Playfair Display',Georgia,serif; }
+.projects-recent-link p { max-width:560px; margin:0; color:#ccd0d3; font-size:13px; line-height:1.65; }
+@media (max-width:700px) { .projects-recent-link__inner { display:block; } .projects-recent-link .pj-hero__btn { margin-top:22px; } }
 
 /* ---- 2. EXPLORE OUR PROJECTS SECTION ---- */
 .pj-explore {

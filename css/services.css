@@ -12,12 +12,12 @@
   left: 0;
   right: 0;
   height: 82%;
-  background-image: url('../assets/services/hero.webp');
+  background-image: url('../assets/home/home-background.webp');
   background-size: cover;
   background-position: center;
 }
 @media (max-width: 768px) {
-  .shero__bg { background-image: url('../assets/services/hero-sm.webp'); }
+  .shero__bg { background-image: url('../assets/home/home-background.webp'); }
 }
 .shero__overlay {
   position: absolute;
