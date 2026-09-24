@@ -128,6 +128,70 @@
     });
   }
 
+  /* ---- Home Testimonials Carousel ---- */
+  var tmPages = document.querySelectorAll(".testimonial-page");
+  var tmDots = document.querySelectorAll(".testimonial-nav__dot");
+  var prevTmBtn = document.getElementById("prevTestimonials");
+  var nextTmBtn = document.getElementById("nextTestimonials");
+  if (tmPages.length && (prevTmBtn || tmDots.length)) {
+    var currentTmPage = 0;
+    var tmTimer = null;
+
+    function goToTmPage(idx) {
+      if (idx < 0) idx = tmPages.length - 1;
+      if (idx >= tmPages.length) idx = 0;
+      currentTmPage = idx;
+
+      tmPages.forEach(function (page, i) {
+        page.classList.toggle("is-active", i === currentTmPage);
+      });
+      tmDots.forEach(function (dot, i) {
+        dot.classList.toggle("is-active", i === currentTmPage);
+      });
+    }
+
+    function startTmTimer() {
+      stopTmTimer();
+      tmTimer = setInterval(function () {
+        goToTmPage(currentTmPage + 1);
+      }, 7500);
+    }
+    function stopTmTimer() {
+      if (tmTimer) {
+        clearInterval(tmTimer);
+        tmTimer = null;
+      }
+    }
+
+    if (prevTmBtn) {
+      prevTmBtn.addEventListener("click", function () {
+        goToTmPage(currentTmPage - 1);
+        startTmTimer();
+      });
+    }
+    if (nextTmBtn) {
+      nextTmBtn.addEventListener("click", function () {
+        goToTmPage(currentTmPage + 1);
+        startTmTimer();
+      });
+    }
+
+    tmDots.forEach(function (dot) {
+      dot.addEventListener("click", function () {
+        var target = parseInt(dot.getAttribute("data-page"), 10);
+        goToTmPage(target);
+        startTmTimer();
+      });
+    });
+
+    var tmTrack = document.getElementById("testimonialPages");
+    if (tmTrack) {
+      tmTrack.addEventListener("mouseenter", stopTmTimer);
+      tmTrack.addEventListener("mouseleave", startTmTimer);
+    }
+    startTmTimer();
+  }
+
   /* ---- Contact form: validation + success state (fallback for static demo forms) ---- */
   var form = document.querySelector(".form:not(#contact-form)");
   if (form) {

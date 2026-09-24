@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preload" as="image" href="assets/projects/Background Image.webp" fetchpriority="high" />
-  <title>Our Work — Projects | AstraKAT Designs</title>
-  <meta name="description" content="Explore AstraKAT Designs curated collection of real homes — from bespoke kitchens and fitted wardrobes to complete home transformations." />
+  <title>Our Work - Projects | AstraKAT Designs</title>
+  <meta name="description" content="Explore AstraKAT Designs curated collection of real homes - from bespoke kitchens and fitted wardrobes to complete home transformations." />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://www.astrakatdesigns.com/projects.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -255,7 +255,7 @@
     <section class="projects-recent-link">
       <div class="projects-recent-link__inner">
         <div>
-          <span class="pj-kicker">NEW — RECENT WORK</span>
+          <span class="pj-kicker">NEW - RECENT WORK</span>
           <h2>See Our Latest Work in Motion.</h2>
           <p>Explore fitted wardrobes, kitchens, media walls, dressing units and more through our latest Instagram project videos.</p>
         </div>
@@ -341,7 +341,7 @@
             </div>
             <!-- Slide 3 -->
             <div class="pj-quote-slide is-hidden" data-slide="2">
-              <p class="pj-quote-body">I am absolutely delighted with my new wardrobe. From start to finish, the service was excellent. The team installed everything quickly and efficiently, and they were friendly, professional, and a pleasure to deal with.</p>
+              <p class="pj-quote-body">I am absolutely delighted with my new wardrobe. From start to finish, the service was excellent. The team installed everything quickly and efficiently, and they were friendly, professional, and a pleasure to deal with. This is the second time I have used them, and once again the quality of the product was exceptional. The workmanship and attention to detail are outstanding, and the finished wardrobe looks fantastic.</p>
               <p class="pj-quote-author">— OLIVIABOURKE 101, GOOGLE REVIEW</p>
             </div>
           </div>
@@ -356,9 +356,9 @@
             </div>
             <div class="pj-carousel-ctrls__right">
               <div class="pj-carousel-dots" id="quoteDots">
-                <button class="pj-carousel-dot is-active" type="button" aria-label="Slide 1" data-dot="0"></button>
-                <button class="pj-carousel-dot" type="button" aria-label="Slide 2" data-dot="1"></button>
-                <button class="pj-carousel-dot" type="button" aria-label="Slide 3" data-dot="2"></button>
+                <button class="pj-carousel-dot is-active" type="button" aria-label="Review 1" data-dot="0"></button>
+                <button class="pj-carousel-dot" type="button" aria-label="Review 2" data-dot="1"></button>
+                <button class="pj-carousel-dot" type="button" aria-label="Review 3" data-dot="2"></button>
               </div>
               <button class="pj-carousel-btn" id="nextQuote" type="button" aria-label="Next testimonial">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6 6-6"/></svg>
@@ -510,12 +510,28 @@
         });
       }
 
+      var autoTimer = null;
+      function startTimer() {
+        stopTimer();
+        autoTimer = setInterval(function () {
+          goToSlide(currentIndex + 1);
+        }, 7000);
+      }
+      function stopTimer() {
+        if (autoTimer) {
+          clearInterval(autoTimer);
+          autoTimer = null;
+        }
+      }
+
       if (prevBtn && nextBtn) {
         prevBtn.addEventListener('click', function () {
           goToSlide(currentIndex - 1);
+          startTimer();
         });
         nextBtn.addEventListener('click', function () {
           goToSlide(currentIndex + 1);
+          startTimer();
         });
       }
 
@@ -523,8 +539,16 @@
         dot.addEventListener('click', function () {
           var targetIndex = parseInt(dot.getAttribute('data-dot'), 10);
           goToSlide(targetIndex);
+          startTimer();
         });
       });
+
+      var testimonialSection = document.getElementById('testimonialTrack');
+      if (testimonialSection && testimonialSection.parentElement) {
+        testimonialSection.parentElement.addEventListener('mouseenter', stopTimer);
+        testimonialSection.parentElement.addEventListener('mouseleave', startTimer);
+      }
+      startTimer();
     });
   </script>
 </body>

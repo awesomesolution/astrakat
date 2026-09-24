@@ -8,13 +8,24 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Load PHPMailer classes
-$phpMailerDir = __DIR__ . '/phpmailer/src';
-if (!file_exists($phpMailerDir . '/Exception.php')) {
-    $phpMailerDir = __DIR__ . '/../phpmailer/src';
+// Load PHPMailer classes from live phpmailer folder (with fallbacks)
+$candidates = [
+    __DIR__ . '/phpmailer/src',
+    __DIR__ . '/assets/phpmailer/src',
+    __DIR__ . '/../phpmailer/src',
+    __DIR__ . '/phpmailer/src/src',
+    __DIR__ . '/phpmailer-sample/src',
+];
+
+$phpMailerDir = null;
+foreach ($candidates as $dir) {
+    if (file_exists($dir . '/Exception.php')) {
+        $phpMailerDir = $dir;
+        break;
+    }
 }
 
-if (file_exists($phpMailerDir . '/Exception.php')) {
+if ($phpMailerDir) {
     require_once $phpMailerDir . '/Exception.php';
     require_once $phpMailerDir . '/PHPMailer.php';
     require_once $phpMailerDir . '/SMTP.php';
@@ -291,7 +302,9 @@ try {
     $mail->Body    = $emailBody;
     $mail->AltBody = $altBody;
 
-    $mail->SMTPDebug = 0; // Prevent debug echo from corrupting JSON response
+    // Route debug to server error_log (does not output to stdout or corrupt JSON)
+    $mail->SMTPDebug = 2;
+    $mail->Debugoutput = 'error_log';
 
     $mail->send();
 
@@ -300,6 +313,7 @@ try {
         'message' => 'Thank you! Your enquiry has been sent successfully. Our design team will get in touch with you shortly.'
     ]);
 } catch (Exception $e) {
+    error_log('PHPMailer send exception: ' . $e->getMessage() . ' | ' . $mail->ErrorInfo);
     http_response_code(500);
     echo json_encode([
         'status'  => 'error',

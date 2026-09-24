@@ -1,0 +1,792 @@
+[18-Dec-2025 15:55:12 UTC] PHP Warning:  file_get_contents(https://www.google.com/recaptcha/api/siteverify?secret=6LdTS94rAAAAANAEXNLu31ydX46K-7MoYAZ9Ia7f&amp;response=): Failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 8
+[18-Dec-2025 15:55:12 UTC] PHP Warning:  Trying to access array offset on null in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 11
+[20-Dec-2025 12:49:02 UTC] PHP Warning:  Undefined array key "g-recaptcha-response" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 5
+[20-Dec-2025 12:57:19 UTC] PHP Warning:  Undefined array key "g-recaptcha-response" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 5
+[20-Dec-2025 13:08:00 UTC] PHP Warning:  Undefined array key "g-recaptcha-response" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 5
+[20-Dec-2025 15:57:30 UTC] PHP Warning:  Undefined array key "subject" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 61
+[20-Dec-2025 15:57:30 UTC] PHP Warning:  Undefined array key "message" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 62
+[20-Dec-2025 16:01:54 UTC] PHP Warning:  Undefined array key "subject" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 61
+[20-Dec-2025 16:01:54 UTC] PHP Warning:  Undefined array key "message" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 62
+[20-Dec-2025 16:03:52 UTC] PHP Warning:  Undefined array key "subject" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 61
+[20-Dec-2025 16:03:52 UTC] PHP Warning:  Undefined array key "message" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 62
+[20-Dec-2025 16:06:53 UTC] PHP Warning:  Undefined array key "subject" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 61
+[20-Dec-2025 16:06:53 UTC] PHP Warning:  Undefined array key "message" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 62
+[20-Dec-2025 18:34:21 UTC] PHP Warning:  Undefined array key "subject" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 61
+[20-Dec-2025 18:34:21 UTC] PHP Warning:  Undefined array key "message" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 62
+[27-Dec-2025 09:45:34 UTC] PHP Warning:  Undefined array key "subject" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 61
+[27-Dec-2025 09:45:34 UTC] PHP Warning:  Undefined array key "message" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 62
+[27-Dec-2025 09:47:43 UTC] PHP Warning:  Undefined array key "subject" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 61
+[27-Dec-2025 09:47:43 UTC] PHP Warning:  Undefined array key "message" in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 62
+[27-Dec-2025 10:24:39 UTC] PHP Warning:  Undefined variable $message in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 96
+[27-Dec-2025 10:29:47 UTC] PHP Warning:  Undefined variable $message in /home/dzi2cgxcml3x/public_html/assets/mail.php on line 96
+[27-Dec-2025 10:48:43 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.98.2 #2 Sat, 27 Dec 2025 03:48:43 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: EHLO www.astrakatdesigns.com
+
+[27-Dec-2025 10:48:43 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello www.astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[27-Dec-2025 10:48:43 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: [credentials hidden]
+[27-Dec-2025 10:48:43 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: [credentials hidden]
+[27-Dec-2025 10:48:43 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[27-Dec-2025 10:48:43 UTC] SERVER -> CLIENT: 250 OK
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[27-Dec-2025 10:48:43 UTC] SERVER -> CLIENT: 250 Accepted
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: DATA
+
+[27-Dec-2025 10:48:43 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: Date: Sat, 27 Dec 2025 10:48:43 +0000
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: Reply-To: Hitesh Shapariya <hitesh_hpk@yahoo.com>
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: Message-ID: <D50oiwG39epYE3F7AhG2X6BP2olZBUMaKN3a8SAcS8o@www.astrakatdesigns.com>
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: 
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: 
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Hitesh Shapariya</p>
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> hitesh_hpk@yahoo.com</p>
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> 09824872103</p>
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: 
+
+[27-Dec-2025 10:48:43 UTC] CLIENT -> SERVER: .
+
+[27-Dec-2025 10:48:44 UTC] SERVER -> CLIENT: 250 OK id=1vZRql-00000002tMG-40wj
+
+[27-Dec-2025 10:48:44 UTC] CLIENT -> SERVER: QUIT
+
+[27-Dec-2025 10:48:44 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+
+[27-Dec-2025 20:26:55 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.98.2 #2 Sat, 27 Dec 2025 13:26:55 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: EHLO astrakatdesigns.com
+
+[27-Dec-2025 20:26:55 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[27-Dec-2025 20:26:55 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: [credentials hidden]
+[27-Dec-2025 20:26:55 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: [credentials hidden]
+[27-Dec-2025 20:26:55 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[27-Dec-2025 20:26:55 UTC] SERVER -> CLIENT: 250 OK
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[27-Dec-2025 20:26:55 UTC] SERVER -> CLIENT: 250 Accepted
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: DATA
+
+[27-Dec-2025 20:26:55 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: Date: Sat, 27 Dec 2025 20:26:55 +0000
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: Reply-To: Sunny <sunnyktt727@gmail.com>
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: Message-ID: <axWmjvWj3o4z3bGLTuYvsd1KLGrPyGERvtvLwNb1Tkk@astrakatdesigns.com>
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: 
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: 
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Sunny</p>
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> sunnyktt727@gmail.com</p>
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> 7867241079</p>
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: 
+
+[27-Dec-2025 20:26:55 UTC] CLIENT -> SERVER: .
+
+[27-Dec-2025 20:26:56 UTC] SERVER -> CLIENT: 250 OK id=1vZasJ-00000005QiH-2sXk
+
+[27-Dec-2025 20:26:56 UTC] CLIENT -> SERVER: QUIT
+
+[27-Dec-2025 20:26:56 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+
+[31-Jan-2026 19:41:22 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.99 #2 Sat, 31 Jan 2026 12:41:22 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: EHLO www.astrakatdesigns.com
+
+[31-Jan-2026 19:41:22 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello www.astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[31-Jan-2026 19:41:22 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: [credentials hidden]
+[31-Jan-2026 19:41:22 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: [credentials hidden]
+[31-Jan-2026 19:41:22 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[31-Jan-2026 19:41:22 UTC] SERVER -> CLIENT: 250 OK
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[31-Jan-2026 19:41:22 UTC] SERVER -> CLIENT: 250 Accepted
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: DATA
+
+[31-Jan-2026 19:41:22 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: Date: Sat, 31 Jan 2026 19:41:22 +0000
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: Reply-To: Mohammad Arif alam <Mohammadarifalam@yahoo.Co.uk>
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: Message-ID: <iICv6oyFmibm52fSTBX8bdNdwP25r8Cr7fCVOEJrsFU@www.astrakatdesigns.com>
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: 
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: 
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Mohammad Arif alam</p>
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> Mohammadarifalam@yahoo.Co.uk</p>
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> 07903779519</p>
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: 
+
+[31-Jan-2026 19:41:22 UTC] CLIENT -> SERVER: .
+
+[31-Jan-2026 19:41:23 UTC] SERVER -> CLIENT: 250 OK id=1vmGqQ-00000006WuL-17RV
+
+[31-Jan-2026 19:41:23 UTC] CLIENT -> SERVER: QUIT
+
+[31-Jan-2026 19:41:23 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+
+[01-Feb-2026 00:08:21 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.99 #2 Sat, 31 Jan 2026 17:08:21 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: EHLO www.astrakatdesigns.com
+
+[01-Feb-2026 00:08:21 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello www.astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[01-Feb-2026 00:08:21 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: [credentials hidden]
+[01-Feb-2026 00:08:21 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: [credentials hidden]
+[01-Feb-2026 00:08:21 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[01-Feb-2026 00:08:21 UTC] SERVER -> CLIENT: 250 OK
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[01-Feb-2026 00:08:21 UTC] SERVER -> CLIENT: 250 Accepted
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: DATA
+
+[01-Feb-2026 00:08:21 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: Date: Sun, 1 Feb 2026 00:08:21 +0000
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: Reply-To: Ju Kay <jummykas2009@hotmail.com>
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: Message-ID: <YyqZGPyRKix7irxCQFRiZ8hBgAHHiBsqRrFbSOozTU@www.astrakatdesigns.com>
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: 
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: 
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Ju Kay</p>
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> jummykas2009@hotmail.com</p>
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> +447868485498</p>
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: 
+
+[01-Feb-2026 00:08:21 UTC] CLIENT -> SERVER: .
+
+[01-Feb-2026 00:08:22 UTC] SERVER -> CLIENT: 250 OK id=1vmL0n-00000007wss-1CtG
+
+[01-Feb-2026 00:08:22 UTC] CLIENT -> SERVER: QUIT
+
+[01-Feb-2026 00:08:22 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+
+[03-Feb-2026 19:58:31 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.99 #2 Tue, 03 Feb 2026 12:58:31 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: EHLO www.astrakatdesigns.com
+
+[03-Feb-2026 19:58:31 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello www.astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[03-Feb-2026 19:58:31 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Feb-2026 19:58:31 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: [credentials hidden]
+[03-Feb-2026 19:58:31 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[03-Feb-2026 19:58:31 UTC] SERVER -> CLIENT: 250 OK
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[03-Feb-2026 19:58:31 UTC] SERVER -> CLIENT: 250 Accepted
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: DATA
+
+[03-Feb-2026 19:58:31 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: Date: Tue, 3 Feb 2026 19:58:31 +0000
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: Reply-To: Trishul Dalal <dalal2000@hotmail.co.uk>
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: Message-ID: <j3lAPf8oevZneAkX7oLHXNV2ngGxXfPHHe95Kcl0o@www.astrakatdesigns.com>
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: 
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: 
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Trishul Dalal</p>
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> dalal2000@hotmail.co.uk</p>
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> 07889563523</p>
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: 
+
+[03-Feb-2026 19:58:31 UTC] CLIENT -> SERVER: .
+
+[03-Feb-2026 19:58:37 UTC] SERVER -> CLIENT: 250 OK id=1vnMXf-0000000E29h-3mFn
+
+[03-Feb-2026 19:58:37 UTC] CLIENT -> SERVER: QUIT
+
+[03-Feb-2026 19:58:38 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+
+[26-Feb-2026 19:07:45 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.99.1 #2 Thu, 26 Feb 2026 12:07:45 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: EHLO www.astrakatdesigns.com
+
+[26-Feb-2026 19:07:45 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello www.astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[26-Feb-2026 19:07:45 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: [credentials hidden]
+[26-Feb-2026 19:07:45 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: [credentials hidden]
+[26-Feb-2026 19:07:45 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[26-Feb-2026 19:07:45 UTC] SERVER -> CLIENT: 250 OK
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[26-Feb-2026 19:07:45 UTC] SERVER -> CLIENT: 250 Accepted
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: DATA
+
+[26-Feb-2026 19:07:45 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: Date: Thu, 26 Feb 2026 19:07:45 +0000
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: Reply-To: Vlad Barskiy <barskiy0502@gmail.com>
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: Message-ID: <zbBCZBebnUP3XpnEhld9JyypuFZo8kWADNnXP9ImHa8@www.astrakatdesigns.com>
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: 
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: 
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Vlad Barskiy</p>
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> barskiy0502@gmail.com</p>
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> 0953092362</p>
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: 
+
+[26-Feb-2026 19:07:45 UTC] CLIENT -> SERVER: .
+
+[26-Feb-2026 19:07:46 UTC] SERVER -> CLIENT: 250 OK id=1vvgi9-000000018UI-3b2V
+
+[26-Feb-2026 19:07:46 UTC] CLIENT -> SERVER: QUIT
+
+[26-Feb-2026 19:07:46 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+
+[04-Mar-2026 12:43:07 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.99.1 #2 Wed, 04 Mar 2026 05:43:07 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: EHLO astrakatdesigns.com
+
+[04-Mar-2026 12:43:07 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[04-Mar-2026 12:43:07 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: [credentials hidden]
+[04-Mar-2026 12:43:07 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: [credentials hidden]
+[04-Mar-2026 12:43:07 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[04-Mar-2026 12:43:07 UTC] SERVER -> CLIENT: 250 OK
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[04-Mar-2026 12:43:07 UTC] SERVER -> CLIENT: 250 Accepted
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: DATA
+
+[04-Mar-2026 12:43:07 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: Date: Wed, 4 Mar 2026 12:43:07 +0000
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: Reply-To: Fola Onaeko <fola@winning.com>
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: Message-ID: <XvTCjtxW9Cfhd7VATpwHHWsszeNEGMAOIERBXGHuY@astrakatdesigns.com>
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: 
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: 
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Fola Onaeko</p>
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> fola@winning.com</p>
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> 07825614999</p>
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: 
+
+[04-Mar-2026 12:43:07 UTC] CLIENT -> SERVER: .
+
+[04-Mar-2026 12:43:08 UTC] SERVER -> CLIENT: 250 OK id=1vxlZD-00000001wGG-3gMO
+
+[04-Mar-2026 12:43:08 UTC] CLIENT -> SERVER: QUIT
+
+[04-Mar-2026 12:43:08 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+
+[02-May-2026 12:52:05 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.99.1 #2 Sat, 02 May 2026 05:52:05 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: EHLO www.astrakatdesigns.com
+
+[02-May-2026 12:52:05 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello www.astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[02-May-2026 12:52:05 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: [credentials hidden]
+[02-May-2026 12:52:05 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: [credentials hidden]
+[02-May-2026 12:52:05 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[02-May-2026 12:52:05 UTC] SERVER -> CLIENT: 250 OK
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[02-May-2026 12:52:05 UTC] SERVER -> CLIENT: 250 Accepted
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: DATA
+
+[02-May-2026 12:52:05 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: Date: Sat, 2 May 2026 12:52:05 +0000
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: Reply-To: Saki Ujjain <sakican7875@gmail.com>
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: Message-ID: <27GJBDg2xJljSHaE2ZDRasIscUJufS7TCR7Hcv2s@www.astrakatdesigns.com>
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: 
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: 
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Saki Ujjain</p>
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> sakican7875@gmail.com</p>
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> 07522295250</p>
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: 
+
+[02-May-2026 12:52:05 UTC] CLIENT -> SERVER: .
+
+[02-May-2026 12:52:06 UTC] SERVER -> CLIENT: 250 OK id=1wJ9pF-000000066ka-2bED
+
+[02-May-2026 12:52:06 UTC] CLIENT -> SERVER: QUIT
+
+[02-May-2026 12:52:06 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+
+[10-May-2026 09:03:20 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.99.2 #2 Sun, 10 May 2026 02:03:20 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: EHLO www.astrakatdesigns.com
+
+[10-May-2026 09:03:20 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello www.astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[10-May-2026 09:03:20 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: [credentials hidden]
+[10-May-2026 09:03:20 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: [credentials hidden]
+[10-May-2026 09:03:20 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[10-May-2026 09:03:20 UTC] SERVER -> CLIENT: 250 OK
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[10-May-2026 09:03:20 UTC] SERVER -> CLIENT: 250 Accepted
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: DATA
+
+[10-May-2026 09:03:20 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: Date: Sun, 10 May 2026 09:03:20 +0000
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: Reply-To: Kinjal Patel <kinjal-patel@hotmail.co.uk>
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: Message-ID: <093pi3QvUzCXqcrkNxCZsbHvZiM2U2zA6A4s5lbWYxk@www.astrakatdesigns.com>
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: 
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: 
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Kinjal Patel</p>
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> kinjal-patel@hotmail.co.uk</p>
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> 07951541143</p>
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: 
+
+[10-May-2026 09:03:20 UTC] CLIENT -> SERVER: .
+
+[10-May-2026 09:03:21 UTC] SERVER -> CLIENT: 250 OK id=1wM04G-000000043g2-2JrD
+
+[10-May-2026 09:03:21 UTC] CLIENT -> SERVER: QUIT
+
+[10-May-2026 09:03:21 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+
+[17-Aug-2026 18:46:10 UTC] SERVER -> CLIENT: 220-p3plzcpnl508860.prod.phx3.secureserver.net ESMTP Exim 4.99.5 #2 Mon, 17 Aug 2026 11:46:10 -0700 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[17-Aug-2026 18:46:10 UTC] CLIENT -> SERVER: EHLO www.astrakatdesigns.com
+
+[17-Aug-2026 18:46:10 UTC] SERVER -> CLIENT: 250-p3plzcpnl508860.prod.phx3.secureserver.net Hello www.astrakatdesigns.com [132.148.218.39]
+250-SIZE 52428800
+250-LIMITS MAILMAX=10 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[17-Aug-2026 18:46:10 UTC] CLIENT -> SERVER: AUTH LOGIN
+
+[17-Aug-2026 18:46:10 UTC] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[17-Aug-2026 18:46:10 UTC] CLIENT -> SERVER: [credentials hidden]
+[17-Aug-2026 18:46:10 UTC] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[17-Aug-2026 18:46:10 UTC] CLIENT -> SERVER: [credentials hidden]
+[17-Aug-2026 18:46:11 UTC] SERVER -> CLIENT: 235 Authentication succeeded
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: MAIL FROM:<no-reply@astrakatdesigns.com>
+
+[17-Aug-2026 18:46:11 UTC] SERVER -> CLIENT: 250 OK
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: RCPT TO:<info@astrakatdesigns.com>
+
+[17-Aug-2026 18:46:11 UTC] SERVER -> CLIENT: 250 Accepted
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: DATA
+
+[17-Aug-2026 18:46:11 UTC] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: Date: Mon, 17 Aug 2026 18:46:10 +0000
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: To: info@astrakatdesigns.com
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: From: Astrakat Designs <no-reply@astrakatdesigns.com>
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: Reply-To: Leng Su <lengsu@hotmail.co.uk>
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: Subject: New Contact Message
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: Message-ID: <aO9xFxuQYXYktnQFp4NRLuAfLMCZg5Uod9Yc15DQ@www.astrakatdesigns.com>
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.1 (https://github.com/PHPMailer/PHPMailer)
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: MIME-Version: 1.0
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: 
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: 
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: <h2>New Contact Form Submission</h2>
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: <p><strong>Name:</strong> Leng Su</p>
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: <p><strong>Email:</strong> lengsu@hotmail.co.uk</p>
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: <p><strong>Phone:</strong> 07703388858</p>
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: 
+
+[17-Aug-2026 18:46:11 UTC] CLIENT -> SERVER: .
+
+[17-Aug-2026 18:46:14 UTC] SERVER -> CLIENT: 250 OK id=1ww2Lb-00000006NNZ-0kDH
+
+[17-Aug-2026 18:46:14 UTC] CLIENT -> SERVER: QUIT
+
+[17-Aug-2026 18:46:14 UTC] SERVER -> CLIENT: 221 p3plzcpnl508860.prod.phx3.secureserver.net closing connection
+

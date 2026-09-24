@@ -145,7 +145,7 @@
 }
 .values__title { font-family: var(--serif); font-size: 30px; font-weight: 600; line-height: 1.2; }
 .values__img { width: 100%; height: 210px; margin-top: 28px; background-size: cover; background-position: center; }
-.values__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 26px; }
+.values__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; }
 .value { text-align: center; transition: transform .45s var(--ease-lux); }
 .value:hover { transform: translateY(-6px); }
 .value__icon { display: grid; place-items: center; margin-bottom: 16px; color: var(--gold); transition: transform .45s var(--ease-lux); }
