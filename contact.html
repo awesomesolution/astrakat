@@ -188,7 +188,7 @@
               <label for="phone">Phone Number*</label>
             </div>
             <div class="field field--icon">
-              <input type="text" id="preferredDate" name="preferredDate" placeholder=" " required onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
+              <input type="date" id="preferredDate" name="preferredDate" required aria-label="Preferred Date" />
               <label for="preferredDate">Preferred Date*</label>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
             </div>
@@ -388,6 +388,26 @@
       el.addEventListener("input", clearWrap);
       el.addEventListener("change", clearWrap);
     });
+
+    // Configure preferredDate datepicker
+    var dateInput = form.querySelector("[name='preferredDate']");
+    if (dateInput) {
+      // Set minimum date to today so past dates cannot be selected
+      var today = new Date();
+      var yyyy = today.getFullYear();
+      var mm = String(today.getMonth() + 1).padStart(2, "0");
+      var dd = String(today.getDate()).padStart(2, "0");
+      dateInput.min = yyyy + "-" + mm + "-" + dd;
+
+      // On click / tap, invoke native picker if supported
+      dateInput.addEventListener("click", function () {
+        if (typeof this.showPicker === "function") {
+          try {
+            this.showPicker();
+          } catch (err) {}
+        }
+      });
+    }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();

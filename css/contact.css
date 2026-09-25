@@ -129,6 +129,7 @@
 }
 .field input:focus ~ label,
 .field input:not(:placeholder-shown) ~ label,
+.field input[type="date"]:valid ~ label,
 .field textarea:focus ~ label,
 .field textarea:not(:placeholder-shown) ~ label,
 .field select:focus ~ label,
@@ -139,6 +140,63 @@
   color: var(--gold);
 }
 
+/* ---- Date Input (Cross-Browser & iOS Safari Support) ---- */
+.field input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: 53px;
+  color-scheme: light;
+  cursor: pointer;
+  position: relative;
+}
+
+/* iOS Safari: Left-align date value properly */
+.field input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  min-height: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide date format placeholder when empty & not focused so floating label is clean */
+.field input[type="date"]:not(:focus):invalid {
+  color: transparent;
+}
+.field input[type="date"]:not(:focus):invalid::-webkit-datetime-edit,
+.field input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-fields-wrapper,
+.field input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-text,
+.field input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-month-field,
+.field input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-day-field,
+.field input[type="date"]:not(:focus):invalid::-webkit-datetime-edit-year-field {
+  color: transparent;
+  opacity: 0;
+}
+
+/* Restore visible text when focused or filled */
+.field input[type="date"]:focus,
+.field input[type="date"]:valid {
+  color: var(--text);
+}
+.field input[type="date"]:focus::-webkit-datetime-edit,
+.field input[type="date"]:valid::-webkit-datetime-edit {
+  color: var(--text);
+  opacity: 1;
+}
+
+/* Expand the native calendar picker indicator across the entire input box on WebKit */
+.field input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
 .field--icon svg {
   position: absolute;
   right: 16px;
@@ -147,6 +205,7 @@
   height: 18px;
   color: var(--muted);
   pointer-events: none;
+  z-index: 1;
 }
 
 .consent { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--muted); margin: 4px 0 20px; cursor: pointer; }
@@ -192,6 +251,11 @@
   .chero__features { gap: 22px 36px; }
   .form__row { grid-template-columns: 1fr; gap: 0; }
   .footer__grid--contact { grid-template-columns: 1fr; }
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 16px; /* Prevents iOS Safari from auto-zooming into fields on focus */
+  }
 }
 
 /* ---- Form validation states & success ---- */

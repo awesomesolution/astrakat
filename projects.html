@@ -14,7 +14,9 @@
   <link rel="stylesheet" href="css/common.css" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/recent-work.css" />
   <script src="js/site.js" defer></script>
+  <script src="js/recent-work.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -73,194 +75,13 @@
 
   <main id="main">
     <!-- ===================== EXPLORE OUR PROJECTS ===================== -->
-    <section class="pj-explore" id="projects">
-      <div class="pj-explore__container">
-        <div class="pj-explore__header">
-          <span class="pj-eyebrow-dash">— EXPLORE OUR PROJECTS —</span>
-          <h2>Real Homes. Remarkable Transformations.</h2>
-          <span class="pj-explore__script" aria-hidden="true">More<br />than just<br />interiors</span>
-        </div>
-
-        <!-- Filter Tabs -->
-        <nav class="pj-filters" aria-label="Filter projects by space" role="tablist">
-          <button class="pj-filter is-active" data-filter="all" role="tab" aria-selected="true">ALL</button>
-          <button class="pj-filter" data-filter="kitchens" role="tab" aria-selected="false">KITCHENS</button>
-          <button class="pj-filter" data-filter="wardrobes" role="tab" aria-selected="false">WARDROBES</button>
-          <button class="pj-filter" data-filter="living-spaces" role="tab" aria-selected="false">LIVING SPACES</button>
-          <button class="pj-filter" data-filter="bedrooms" role="tab" aria-selected="false">BEDROOMS</button>
-          <button class="pj-filter" data-filter="bathrooms" role="tab" aria-selected="false">BATHROOMS</button>
-          <button class="pj-filter" data-filter="home-offices" role="tab" aria-selected="false">HOME OFFICES</button>
-          <button class="pj-filter" data-filter="bars" role="tab" aria-selected="false">BARS &amp; ENTERTAINMENT</button>
-          <button class="pj-filter" data-filter="full-home" role="tab" aria-selected="false">FULL HOME</button>
-        </nav>
-
-        <!-- 3x3 Project Grid -->
-        <div class="pj-grid" id="projectGrid">
-          <!-- 1. Kitchens -->
-          <a class="pj-card" href="recent-work.html?category=kitchens#videos" data-category="kitchens">
-            <div class="pj-card__media">
-              <img src="assets/projects/1.webp" alt="Bespoke Kitchen design" class="pj-card__img" loading="lazy" />
-              <div class="pj-card__overlay"></div>
-            </div>
-            <div class="pj-card__body">
-              <div class="pj-card__info">
-                <h3>Kitchens</h3>
-                <p>Stylish. Functional. Timeless.</p>
-              </div>
-              <span class="pj-card__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- 2. Fitted Wardrobes -->
-          <a class="pj-card" href="recent-work.html?category=fitted-wardrobes#videos" data-category="wardrobes">
-            <div class="pj-card__media">
-              <img src="assets/projects/2.webp" alt="Bespoke Fitted Wardrobes and Walk-in Closet" class="pj-card__img" loading="lazy" />
-              <div class="pj-card__overlay"></div>
-            </div>
-            <div class="pj-card__body">
-              <div class="pj-card__info">
-                <h3>Fitted Wardrobes</h3>
-                <p>Storage. Style. Seamless.</p>
-              </div>
-              <span class="pj-card__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- 3. Living Spaces -->
-          <a class="pj-card" href="recent-work.html?category=media-walls#videos" data-category="living-spaces">
-            <div class="pj-card__media">
-              <img src="assets/projects/3.webp" alt="Bespoke Living Spaces and Media Walls" class="pj-card__img" loading="lazy" />
-              <div class="pj-card__overlay"></div>
-            </div>
-            <div class="pj-card__body">
-              <div class="pj-card__info">
-                <h3>Living Spaces</h3>
-                <p>Designed for togetherness.</p>
-              </div>
-              <span class="pj-card__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- 4. Bedrooms -->
-          <a class="pj-card" href="recent-work.html?category=walk-in-wardrobes#videos" data-category="bedrooms">
-            <div class="pj-card__media">
-              <img src="assets/projects/4.webp" alt="Bespoke Bedrooms and Statement Headboards" class="pj-card__img" loading="lazy" />
-              <div class="pj-card__overlay"></div>
-            </div>
-            <div class="pj-card__body">
-              <div class="pj-card__info">
-                <h3>Bedrooms</h3>
-                <p>A sanctuary, your way.</p>
-              </div>
-              <span class="pj-card__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- 5. Bathrooms -->
-          <a class="pj-card" href="recent-work.html?category=utility-rooms#videos" data-category="bathrooms">
-            <div class="pj-card__media">
-              <img src="assets/projects/5.webp" alt="Luxury Bathroom Interior Design" class="pj-card__img" loading="lazy" />
-              <div class="pj-card__overlay"></div>
-            </div>
-            <div class="pj-card__body">
-              <div class="pj-card__info">
-                <h3>Bathrooms</h3>
-                <p>Everyday luxury.</p>
-              </div>
-              <span class="pj-card__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- 6. Home Offices -->
-          <a class="pj-card" href="recent-work.html?category=study-tables#videos" data-category="home-offices">
-            <div class="pj-card__media">
-              <img src="assets/projects/6.webp" alt="Bespoke Home Office and Study Desks" class="pj-card__img" loading="lazy" />
-              <div class="pj-card__overlay"></div>
-            </div>
-            <div class="pj-card__body">
-              <div class="pj-card__info">
-                <h3>Home Offices</h3>
-                <p>Work. Focus. Create.</p>
-              </div>
-              <span class="pj-card__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- 7. Bars & Entertainment -->
-          <a class="pj-card" href="recent-work.html?category=bars#videos" data-category="bars">
-            <div class="pj-card__media">
-              <img src="assets/projects/7.webp" alt="Bespoke Home Bars and Entertaining Units" class="pj-card__img" loading="lazy" />
-              <div class="pj-card__overlay"></div>
-            </div>
-            <div class="pj-card__body">
-              <div class="pj-card__info">
-                <h3>Bars &amp; Entertainment</h3>
-                <p>Made for memorable moments.</p>
-              </div>
-              <span class="pj-card__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- 8. Hallways & Entrances -->
-          <a class="pj-card" href="recent-work.html?category=understairs-storage#videos" data-category="hallways living-spaces full-home">
-            <div class="pj-card__media">
-              <img src="assets/projects/8.webp" alt="Luxury Hallway and Entrance Interior Design" class="pj-card__img" loading="lazy" />
-              <div class="pj-card__overlay"></div>
-            </div>
-            <div class="pj-card__body">
-              <div class="pj-card__info">
-                <h3>Hallways &amp; Entrances</h3>
-                <p>Make a lasting first impression.</p>
-              </div>
-              <span class="pj-card__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- 9. Complete Homes -->
-          <a class="pj-card" href="recent-work.html?category=all#videos" data-category="full-home">
-            <div class="pj-card__media">
-              <img src="assets/projects/9.webp" alt="Complete Home Architectural Development and Interior Transformation" class="pj-card__img" loading="lazy" />
-              <div class="pj-card__overlay"></div>
-            </div>
-            <div class="pj-card__body">
-              <div class="pj-card__info">
-                <h3>Complete Homes</h3>
-                <p>From vision to reality.</p>
-              </div>
-              <span class="pj-card__arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects-recent-link">
-      <div class="projects-recent-link__inner">
-        <div>
-          <span class="pj-kicker">NEW - RECENT WORK</span>
-          <h2>See Our Latest Work in Motion.</h2>
-          <p>Explore fitted wardrobes, kitchens, media walls, dressing units and more through our latest Instagram project videos.</p>
-        </div>
-        <a href="recent-work.html" class="pj-hero__btn">VIEW RECENT WORK <span>&rarr;</span></a>
-      </div>
+    <span id="projects"></span>
+    <section class="rw-videos container" id="videos">
+      <p class="eyebrow eyebrow--center">FEATURED PROJECT VIDEOS</p>
+      <h2 class="section-title">See the work in motion.</h2>
+      <p class="rw-intro">Every video opens the related Instagram post or reel, so you can see the detail, process and finished result for yourself.</p>
+      <nav class="rw-filters" id="rwFilters" aria-label="Filter recent work"></nav>
+      <div class="rw-grid" id="rwGrid"></div>
     </section>
 
     <!-- ===================== STATS STRIP ===================== -->
@@ -462,33 +283,6 @@
   <!-- ===================== JAVASCRIPT ===================== -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      /* ---- Filter Functionality ---- */
-      var filterButtons = document.querySelectorAll('.pj-filter');
-      var cards = document.querySelectorAll('.pj-card');
-
-      filterButtons.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          filterButtons.forEach(function (b) {
-            b.classList.remove('is-active');
-            b.setAttribute('aria-selected', 'false');
-          });
-          btn.classList.add('is-active');
-          btn.setAttribute('aria-selected', 'true');
-
-          var target = btn.getAttribute('data-filter');
-
-          cards.forEach(function (card) {
-            var rawCats = card.getAttribute('data-category') || '';
-            var catList = rawCats.split(/\s+/);
-            if (target === 'all' || catList.indexOf(target) !== -1) {
-              card.classList.remove('is-hidden');
-            } else {
-              card.classList.add('is-hidden');
-            }
-          });
-        });
-      });
-
       /* ---- Testimonial Carousel ---- */
       var slides = document.querySelectorAll('.pj-quote-slide');
       var dots = document.querySelectorAll('.pj-carousel-dot');
