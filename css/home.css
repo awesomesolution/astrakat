@@ -46,6 +46,13 @@
   margin-top: 44px;
 }
 
+.cards-2home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-top: 44px;
+}
+
 /* ---- What We Specialise In ---- */
 .specialise { padding: 104px 28px 96px; }
 .spec-card {
